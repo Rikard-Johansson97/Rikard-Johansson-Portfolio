@@ -19,7 +19,7 @@ const navigation = [
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
-    <div className='flex bg-[url("https://www.transparenttextures.com/patterns/cartographer.png")] bg-background border-t-2 border-greenText justify-center'>
+    <div className='flex bg-[url("https://www.transparenttextures.com/patterns/cartographer.png")] bg-background border-t-2 border-greenText justify-center p-2'>
       <nav>
         {navigation.map((link, i) => (
           <IconButton

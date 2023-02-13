@@ -21,14 +21,18 @@
 }
 
 *::-webkit-scrollbar-track {
-	background: transparent;
+	background: #1d1d1d;
 }
 
-*::-webkit-scrollbar-thumb {
-	background-color: #ffffff40;
+::-webkit-scrollbar-thumb {
+  background-color: #2cb67d30;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-*::-webkit-scrollbar-thumb:hover,
-*::-webkit-scrollbar-thumb:active {
-	background-color: #ffffff60;
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
+  background-color: #2cb67d;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
