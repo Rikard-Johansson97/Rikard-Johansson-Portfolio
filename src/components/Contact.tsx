@@ -20,26 +20,26 @@ const contacts = [
   {
     icon: <PhoneIcon />,
     name: "PHONE",
-    content: "+46708476666",
+    content: "+46 70 847 66 66",
   },
 ];
 
 const Contact: FC<ContactProps> = ({}) => {
   return (
-    <div className='flex flex-col items-center justify-center p-4'>
-      <h3 className='text-headline text-xl'>Contact Me</h3>
+    <div className='flex flex-col items-center justify-center p-4 bg-background'>
+      <h3 className='text-headline text-xl font-bold'>Contact Me</h3>
       <p className='text-paragraph text-center'>
         If you are interested in hiring me, please contact me via email or
         phone. I look forward to hearing from you and discussing how I can help.
       </p>
-      <div className='flex justify-between w-full max-w-xl p-4'>
+      <div className='flex justify-evenly w-full max-w-2xl p-4 flex-col sm:flex-row'>
         {contacts.map((item, i) => (
-          <div key={i} className='flex flex-col text-center'>
-            <IconButton className='text-greenText'>{item.icon}</IconButton>
-            <p className='text-lg text-headline'>{item.name}</p>
-            <p className='text-xs text-paragraph text-headline'>
-              {item.content}
-            </p>
+          <div key={i} className='flex flex-col text-center p-2'>
+            <div>
+              <IconButton className='text-greenText'>{item.icon}</IconButton>
+            </div>
+            <p className='text-lg text-headline font-medium'>{item.name}</p>
+            <p className='text-xs text-paragraph'>{item.content}</p>
           </div>
         ))}
       </div>
