@@ -2,7 +2,7 @@
 import React, { FC } from "react";
 import KeenSlider from "keen-slider";
 import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react";
+import { useKeenSlider, KeenSliderPlugin } from "keen-slider/react";
 
 interface SkillCarouselProps {}
 
@@ -46,14 +46,50 @@ const skills = [
 ];
 
 const SkillCarousel: FC<SkillCarouselProps> = ({}) => {
-  const [ref] = useKeenSlider<HTMLDivElement>({
-    mode: "free-snap",
-    loop: true,
-    slides: {
-      perView: "auto",
-      spacing: 50,
+  const [ref] = useKeenSlider<HTMLDivElement>(
+    {
+      mode: "free-snap",
+      loop: true,
+
+      slides: {
+        perView: "auto",
+        spacing: 50,
+      },
+      defaultAnimation: {
+        duration: 2000,
+      },
     },
-  });
+    [
+      (slider) => {
+        let timeout: ReturnType<typeof setTimeout>;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 1000);
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
+      },
+    ]
+  );
 
   return (
     <div className='rounded-xl shadow-inner border-2 border-greenText py-4 mt-8 mb-4 sm:mx-4 bg-background overflow-hidden '>
