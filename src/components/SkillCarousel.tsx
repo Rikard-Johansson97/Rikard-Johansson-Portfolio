@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { FC } from "react";
-import KeenSlider from "keen-slider";
+import React, { FC, useState } from "react";
 import "keen-slider/keen-slider.min.css";
-import { useKeenSlider, KeenSliderPlugin } from "keen-slider/react";
+import { useKeenSlider } from "keen-slider/react";
+import SwipeTwoToneIcon from "@mui/icons-material/SwipeTwoTone";
 
 interface SkillCarouselProps {}
 
@@ -46,6 +46,8 @@ const skills = [
 ];
 
 const SkillCarousel: FC<SkillCarouselProps> = ({}) => {
+  const [drag, setDrag] = useState(false);
+
   const [ref] = useKeenSlider<HTMLDivElement>(
     {
       mode: "free-snap",
@@ -92,8 +94,18 @@ const SkillCarousel: FC<SkillCarouselProps> = ({}) => {
   );
 
   return (
-    <div className='rounded-xl shadow-inner border-2 border-greenText py-4 mt-8 mb-4 sm:mx-4 bg-background overflow-hidden '>
+    <div
+      className={`rounded-xl shadow-inner border-2 border-greenText py-6 mt-8 mb-4 bg-background overflow-hidden drop-shadow-md cursor-grab ${
+        drag && " cursor-grabbing"
+      }`}
+      onMouseDown={() => setDrag(true)}
+      onMouseLeave={() => setDrag(false)}
+      onMouseUp={() => setDrag(false)}>
       <div ref={ref} className='keen-slider'>
+        <div className='absolute flex flex-col gap-2 items-center justify-center z-10 w-full h-full duration-200 opacity-0 hover:opacity-100 transition-opacity'>
+          <p className='text-xl text-headline'>Swipe left or right</p>
+          <SwipeTwoToneIcon className='text-white' fontSize='large' />
+        </div>
         {skills.map((skill, i) => (
           <div key={i} className='keen-slider__slide flex flex-col justify-end'>
             <img className=' object-contain' src={skill.src} alt={skill.name} />

@@ -30,6 +30,9 @@ module.exports = {
       boxShadow: {
         "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
       },
+      borderRadius: {
+        shape: "30% 70% 55% 45% / 32% 34% 66% 68%",
+      },
       display: ["group-hover"],
     },
   },

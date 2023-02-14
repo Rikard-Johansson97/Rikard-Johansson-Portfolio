@@ -21,11 +21,11 @@
 }
 
 *::-webkit-scrollbar-track {
-	background: #1d1d1d;
+	background: rgb(24, 22, 22);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2cb67d30;
+  background-color: #2cb67d60;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
