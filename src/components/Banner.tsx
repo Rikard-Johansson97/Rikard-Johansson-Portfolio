@@ -31,9 +31,9 @@ const Banner: FC<BannerProps> = ({}) => {
           </p>
         </div>
 
-        <div className='flex-1 flex items-center justify-center'>
+        <div className='flex-1 flex w-full items-center justify-center'>
           <img
-            className='w-2/3 rounded-shape shadow-xl drop-shadow-xl'
+            className='rounded-shape shadow-xl drop-shadow-xl max-h-80 mx-auto'
             src='https://i.postimg.cc/brGX8Scp/Banner-Image.png'
             alt='Banner Image'
           />
