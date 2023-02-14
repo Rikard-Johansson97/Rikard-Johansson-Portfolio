@@ -6,22 +6,24 @@ interface BannerProps {}
 
 const Banner: FC<BannerProps> = ({}) => {
   return (
-    <div className='w-full bg-[url("https://www.transparenttextures.com/patterns/cartographer.png")] bg-black border-b-2 border-greenText overflow-hidden'>
+    <div className='w-full bg-[url("https://www.transparenttextures.com/patterns/cartographer.png")] bg-black border-b-2 border-greenText overflow-hidden pt-12'>
       <div className='flex flex-col items-start sm:flex-row py-10 px-4 max-w-5xl mx-auto gap-6'>
-        <div className='flex flex-col items-start justify-between flex-1 gap-4'>
+        <div className='flex flex-col items-start justify-center flex-1 gap-4'>
           <h3 className='text-sm font-bold text-headline bg-highlight border border-paragraph p-2 rounded-lg shadow-lg'>
             Välkommen till min Portfolio
           </h3>
-          <Typed
-            className='text-3xl font-bold text-headline pt-2 pb-4'
-            strings={[
-              "Hej, jag är Rikard en Webbutvecklare",
-              "Hej, jag är Rikard en Frontend Utvecklare",
-            ]}
-            backSpeed={30}
-            typeSpeed={80}
-            loop
-          />
+          <div className='h-16'>
+            <Typed
+              className='text-3xl font-bold text-headline pt-2 pb-4'
+              strings={[
+                "Hej, jag är Rikard en Webbutvecklare",
+                "Hej, jag är Rikard en Frontend Utvecklare",
+              ]}
+              backSpeed={30}
+              typeSpeed={80}
+              loop
+            />
+          </div>
           <p className='text-sm text-paragraph'>
             Jag är en målinriktad och ambitiös utvecklare som brinner för att
             skapa användbara verktyg som kan göra skillnad för andra människor.

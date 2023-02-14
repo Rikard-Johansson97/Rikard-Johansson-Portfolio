@@ -26,7 +26,9 @@ const contacts = [
 
 const Contact: FC<ContactProps> = ({}) => {
   return (
-    <div className='flex flex-col items-center justify-center p-4 bg-background'>
+    <div
+      id='contact'
+      className='flex flex-col items-center justify-center p-4 bg-background'>
       <h3 className='text-headline text-xl font-bold'>Contact Me</h3>
       <p className='text-paragraph text-center'>
         If you are interested in hiring me, please contact me via email or

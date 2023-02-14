@@ -5,8 +5,10 @@ interface SkillsProps {}
 
 const Skills: FC<SkillsProps> = ({}) => {
   return (
-    <div className='mx-auto flex flex-col items-center justify-center shadow-2xl'>
-      <div className=' max-w-5xl bg-lightBackground p-4 text-center'>
+    <div
+      id='skills'
+      className='mx-auto flex flex-col items-center justify-center shadow-2xl p-4'>
+      <div className=' max-w-5xl bg-lightBackground text-center'>
         <h3 className='text-xl font-bold text-headline p-2'>Skills</h3>
         <p className='text-paragraph font-semibold text-sm'>
           As a specialized web developer in the MERN stack, I have a strong

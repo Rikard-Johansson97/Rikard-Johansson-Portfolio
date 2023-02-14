@@ -1,32 +1,48 @@
 /* eslint-disable @next/next/no-img-element */
-import { Fragment, FC } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { FC, useState } from "react";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 interface NavbarProps {}
 
-const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+interface NavigationType {
+  name: string;
+  href: string;
+  current: boolean;
+}
+
+const navigation: NavigationType[] = [
+  { name: "Home", href: "/", current: true },
+  { name: "Skills", href: "#skills", current: false },
+  { name: "Projects", href: "#projects", current: false },
+  { name: "Contact", href: "#contact", current: false },
 ];
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Navbar: FC<NavbarProps> = ({}) => {
+const Navbar: FC<NavbarProps> = () => {
+  const [currentItem, setCurrentItem] = useState(navigation[0]);
+  const [open, setOpen] = useState(false);
+
+  const handleItemClick = (item: NavigationType) => {
+    setCurrentItem({ ...currentItem, current: false });
+    setCurrentItem(item);
+  };
+
   return (
-    <Disclosure as='nav' className='bg-gray-800'>
+    <Disclosure as='nav' className={`absolute w-full`}>
       {({ open }) => (
         <>
-          <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
+          <div className='mx-auto max-w-5xl px-4'>
             <div className='relative flex h-16 items-center justify-between'>
               <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
-                {/* Mobile menu button*/}
-                <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
-                  <span className='sr-only'>Open main menu</span>
+                <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-paragraph hover:bg-background hover:text-headline focus:outline-none focus:ring-2 focus:ring-inset focus:ring-headline'>
+                  <span className='sr-only'>
+                    {open ? "Close main menu" : "Open main menu"}
+                  </span>
                   {open ? (
                     <XMarkIcon className='block h-6 w-6' aria-hidden='true' />
                   ) : (
@@ -37,26 +53,26 @@ const Navbar: FC<NavbarProps> = ({}) => {
               <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
                 <div className='flex flex-shrink-0 items-center'>
                   <img
-                    className='block h-8 w-auto lg:block'
+                    className='hidden h-8 w-auto sm:block rounded-shape shadow-sm'
                     src='https://i.postimg.cc/J4brMKmD/Avatar-Maker.png'
                     alt='Your Company'
                   />
                 </div>
                 <div className='hidden sm:ml-6 sm:block'>
-                  <div className='flex space-x-4'>
+                  <div className='flex'>
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
-                        )}
-                        aria-current={item.current ? "page" : undefined}>
+                        scroll={false}
+                        className={`px-3 py-2 rounded-md text-sm font-medium ${
+                          item === currentItem
+                            ? "underline underline-offset-2 text-headline"
+                            : "text-paragraph hover:text-highlight"
+                        }`}
+                        onClick={() => handleItemClick(item)}>
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -65,7 +81,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
           </div>
 
           <Disclosure.Panel className='sm:hidden'>
-            <div className='space-y-1 px-2 pt-2 pb-3'>
+            <div className='space-y-1 px-2 pt-2 pb-3 bg-background border-b-2 border-greenText'>
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -73,8 +89,8 @@ const Navbar: FC<NavbarProps> = ({}) => {
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      ? "bg-background text-headline"
+                      : "text-highlight hover:text-headline",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}>

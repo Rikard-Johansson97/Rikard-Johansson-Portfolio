@@ -5,7 +5,9 @@ interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = ({}) => {
   return (
-    <div className='bg-lightBackground flex flex-col items-center justify-center p-4 shadow-md '>
+    <div
+      id='projects'
+      className='bg-lightBackground flex flex-col items-center justify-center p-4 shadow-md '>
       <h3 className='text-2xl font-bold text-headline p-2'>Projects</h3>
       <p className='text-sm text-paragraph font-semibold'>
         {"Check out some of the cool projects I've been working on!"}
