@@ -16,8 +16,8 @@ const Banner: FC<BannerProps> = ({}) => {
             <Typed
               className='text-3xl font-bold text-headline pt-2 pb-4'
               strings={[
-                "Hej, jag är Rikard en Webbutvecklare",
-                "Hej, jag är Rikard en Frontend Utvecklare",
+                "Hej, jag är Rikard - Webbutvecklare",
+                "Hej, jag är Rikard - Frontend Utvecklare",
               ]}
               backSpeed={30}
               typeSpeed={80}
