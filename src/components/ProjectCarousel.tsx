@@ -28,7 +28,7 @@ const ProjectCarousel: FC<ProjectCarouselProps> = (props) => {
         <img
           src={props.images[activeIndex].largeURL}
           alt=''
-          className='max-h-[60vh] w-full object-cover mx-auto'
+          className='max-h-[50vh] w-full object-cover mx-auto'
         />
       </div>
       <div className='flex gap-2 mt-2' id={props.galleryID}>

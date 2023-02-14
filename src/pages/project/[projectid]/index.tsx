@@ -7,7 +7,7 @@ const Index: NextPage = () => {
   const { projectid } = router.query;
 
   return (
-    <div className='flex-1 mx-auto mt-16'>
+    <div className='flex-1 mx-auto mt-20'>
       <ProjectCarousel
         galleryID='my-test-gallery'
         images={[
