@@ -3,7 +3,15 @@ import React, { FC, useEffect, useState } from "react";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 
-interface ProjectCarouselProps {}
+interface ProjectCarouselProps {
+  galleryID: string;
+  images: {
+    largeURL: string;
+    thumbnailURL: string;
+    width: number;
+    height: number;
+  }[];
+}
 
 const ProjectCarousel: FC<ProjectCarouselProps> = (props) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
