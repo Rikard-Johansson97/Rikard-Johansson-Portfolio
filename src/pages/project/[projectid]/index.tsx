@@ -5,19 +5,17 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import parse from "html-react-parser";
 import { useEffect, useState } from "react";
+import { Project } from "@/types/types";
 
 const Index: NextPage = () => {
   const router = useRouter();
   const { projectid } = router.query;
 
-  const [data, loading, error] = useGetProject(projectid as string);
+  const [data, loading, error] = useGetProject(projectid as string) as Project;
 
   if (loading) return <h1>Loading...</h1>;
 
   const html: string = data?.description;
-
-  console.log(data);
-  console.log(projectid);
 
   return (
     <div className='flex-1 mx-auto mt-16 p-4'>

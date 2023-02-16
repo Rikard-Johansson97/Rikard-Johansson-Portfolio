@@ -8,7 +8,7 @@ const pb = new PocketBase('http://127.0.0.1:8090');
 export default function useGetProject(id: string) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
-  const [data, setData] = useState<Project | null>(null);
+  const [data, setData] = useState<Project>();
   
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function useGetProject(id: string) {
       try {
         if(!id) return null
         const record = await pb.collection('projects').getOne(id) as Project;
-        setData(record);
+        setData(record as Project);
       } catch (error) {
 
         setError(error as ClientError);

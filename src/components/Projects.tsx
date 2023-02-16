@@ -2,16 +2,18 @@
 import React, { FC } from "react";
 import Button from "@mui/material/Button";
 import Link from "next/link";
-import { Project } from "@/types/types";
+import { Project, ProjectData } from "@/types/types";
 import { Chip } from "@mui/material";
 import useGetProjects from "@/lib/Projects";
 
 interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = ({}) => {
-  const [data, loading, error] = useGetProjects();
+  const [data, loading, error] = useGetProjects() as Project[];
 
   if (loading) return <h1>Loading</h1>;
+
+  const projects = data;
 
   return (
     <div
@@ -22,7 +24,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
         {"Kolla in några av de häftiga projekt jag har arbetat på!"}
       </p>
       <div className='grid grid-cols-auto-fit-200 p-4 gap-8 w-full max-w-5xl'>
-        {data?.map((project: Project, i: number) => (
+        {data?.map((project: ProjectData, i: number) => (
           <div key={i} className=' rounded-xl'>
             <div className='relative'>
               <div className=' absolute transition duration-300 opacity:0 hover:opacity-80 hover:bg-black hover:border-2 z-10 flex items-center justify-center w-full h-full group rounded-xl'>

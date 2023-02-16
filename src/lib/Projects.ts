@@ -6,8 +6,8 @@ const pb = new PocketBase('http://127.0.0.1:8090');
 
 export default function useGetProjects() {
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [data, setData] = useState<Project[] | null>(null);
+  const [error, setError] = useState<Error | null>(null);
+  const [data, setData] = useState<Project[]>();
 
   useEffect(() => {
     const fetchData = async () => {

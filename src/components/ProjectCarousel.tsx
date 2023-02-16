@@ -1,9 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { FC, useEffect, useState } from "react";
+import PhotoSwipe from "photoswipe";
+import PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 
 interface ProjectCarouselProps {
+  galleryID: string;
   images: {
     largeURL: string;
     thumbnailURL: string;

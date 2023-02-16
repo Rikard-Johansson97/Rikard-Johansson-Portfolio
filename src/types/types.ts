@@ -1,4 +1,10 @@
-export interface Project {
+export type Project = [
+  ProjectData,
+  boolean,
+  any
+]
+
+export type ProjectData = {
   collectionId: string;
   collectionName: string;
   created: string;
@@ -13,9 +19,8 @@ export interface Project {
   name: string;
   tools: string[];
   updated: string;
-  expand: object;
-}
-
+  expand: {};
+};
 
 export interface Error {
   url: string;
