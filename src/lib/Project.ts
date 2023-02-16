@@ -4,7 +4,7 @@ import { Project } from '@/types/types';
 
 const pb = new PocketBase('http://127.0.0.1:8090');
 
-export default function useGetProjects() {
+export default function useGetProject(id : string) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [data, setData] = useState<Project[]>([]);
@@ -12,8 +12,10 @@ export default function useGetProjects() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const records  = await pb.collection("projects").getFullList(200);
-        setData(records  as any);
+        const record = await pb.collection('projects').getOne(id, {
+            expand: 'relField1,relField2.subRelField',
+        });
+        setData(record  as any);
       } catch (error) {
         setError(error as any);
       } finally {

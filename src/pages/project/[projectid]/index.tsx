@@ -1,4 +1,5 @@
 import ProjectCarousel from "@/components/ProjectCarousel";
+import useGetProject from "@/lib/Project";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 
@@ -6,8 +7,13 @@ const Index: NextPage = () => {
   const router = useRouter();
   const { projectid } = router.query;
 
+  const [data, loading, error] = useGetProject(projectid as string);
+
+  console.log(data);
+  const project = data?.field;
+
   return (
-    <div className='flex-1 mx-auto mt-20'>
+    <div className='flex-1 mx-auto mt-16 p-4'>
       <ProjectCarousel
         galleryID='my-test-gallery'
         images={[
@@ -53,6 +59,10 @@ const Index: NextPage = () => {
           },
         ]}
       />
+      <div className='mt-4'>
+        <h2 className='text-2xl text-headline font-bold'>{project.name}</h2>
+        <p className='text-paragraph font-semibold'>{project.description}</p>
+      </div>
     </div>
   );
 };

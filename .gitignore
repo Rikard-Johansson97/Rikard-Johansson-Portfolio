@@ -43,5 +43,4 @@ logs.db
 logs.db-shm
 logs.db-wal
 pocketbase.exe
-pb_migrations/1676388854_created_projects.js
-pb_migrations/1676390688_updated_projects.js
+pb_migrations/*

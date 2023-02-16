@@ -2,14 +2,14 @@
 import React, { FC } from "react";
 import Button from "@mui/material/Button";
 import Link from "next/link";
-import usePocketBaseList from "@/lib/Projects";
 import { Project } from "@/types/types";
 import { Chip } from "@mui/material";
+import useGetProjects from "@/lib/Projects";
 
 interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = ({}) => {
-  const [data, loading, error] = usePocketBaseList();
+  const [data, loading, error] = useGetProjects();
 
   if (loading) return <h1>Loading</h1>;
 
@@ -36,15 +36,15 @@ const Projects: FC<ProjectsProps> = ({}) => {
               </div>
               <img
                 className='aspect-square shadow-xl object-cover rounded-xl'
-                src={project?.field.images[0]}
-                alt={project?.field.name}
+                src={project?.images[0].thumbnailURL}
+                alt={project?.name}
               />
             </div>
             <h3 className='text-headline text-xl font-semibold pb-2'>
-              {project?.field.name}
+              {project?.name}
             </h3>
             <div className='flex gap-2 flex-wrap'>
-              {project?.field.tools.map((item, i) => (
+              {project?.tools.map((item, i) => (
                 <Chip
                   key={i}
                   label={item}
