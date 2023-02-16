@@ -1,7 +1,9 @@
 import ProjectCarousel from "@/components/ProjectCarousel";
 import useGetProject from "@/lib/Project";
+import { Chip } from "@mui/material";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
+import parse from "html-react-parser";
 
 const Index: NextPage = () => {
   const router = useRouter();
@@ -9,8 +11,12 @@ const Index: NextPage = () => {
 
   const [data, loading, error] = useGetProject(projectid as string);
 
+  if (loading) return <h1>Loading...</h1>;
+
+  const html: string = data?.description;
+
   console.log(data);
-  const project = data?.field;
+  console.log(projectid);
 
   return (
     <div className='flex-1 mx-auto mt-16 p-4'>
@@ -18,50 +24,50 @@ const Index: NextPage = () => {
         galleryID='my-test-gallery'
         images={[
           {
-            largeURL:
-              "https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg",
-            thumbnailURL:
-              "https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg",
-            width: 1875,
-            height: 2500,
+            largeURL: "https://i.imgur.com/LHsNofw.jpg",
+            thumbnailURL: "https://i.imgur.com/LHsNofw.jpg",
+            width: 375,
+            height: 2000,
           },
           {
-            largeURL:
-              "https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg",
-            thumbnailURL:
-              "https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg",
-            width: 1669,
-            height: 2500,
+            largeURL: "https://i.imgur.com/gfp7BbA.jpg",
+            thumbnailURL: "https://i.imgur.com/gfp7BbA.jpg",
+            width: 1000,
+            height: 1000,
           },
           {
-            largeURL:
-              "https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg",
-            thumbnailURL:
-              "https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg",
-            width: 2500,
-            height: 1666,
+            largeURL: "https://i.imgur.com/LHsNofw.jpg",
+            thumbnailURL: "https://i.imgur.com/LHsNofw.jpg",
+            width: 375,
+            height: 1000,
           },
           {
-            largeURL:
-              "https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg",
-            thumbnailURL:
-              "https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg",
-            width: 2500,
-            height: 1666,
+            largeURL: "https://i.imgur.com/gfp7BbA.jpg",
+            thumbnailURL: "https://i.imgur.com/gfp7BbA.jpg",
+            width: 1000,
+            height: 1000,
           },
           {
-            largeURL:
-              "https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg",
-            thumbnailURL:
-              "https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg",
-            width: 2500,
-            height: 1666,
+            largeURL: "https://i.imgur.com/LHsNofw.jpg",
+            thumbnailURL: "https://i.imgur.com/LHsNofw.jpg",
+            width: 375,
+            height: 1000,
           },
         ]}
       />
-      <div className='mt-4'>
-        <h2 className='text-2xl text-headline font-bold'>{project.name}</h2>
-        <p className='text-paragraph font-semibold'>{project.description}</p>
+      <div className='mt-4 flex flex-col max-w-5xl mx-auto'>
+        <h2 className='text-2xl text-headline font-bold'>{data.name}</h2>
+        <div className='flex py-4 gap-2'>
+          {data?.tools?.map((tool: string, i: number) => (
+            <Chip
+              key={i}
+              label={tool}
+              variant='outlined'
+              className='text-paragraph font-semibold border-greenText'
+            />
+          ))}
+        </div>
+        <p className='text-paragraph font-semibold'>{parse(String(html))}</p>
       </div>
     </div>
   );

@@ -12,9 +12,7 @@ export default function useGetProject(id : string) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const record = await pb.collection('projects').getOne(id, {
-            expand: 'relField1,relField2.subRelField',
-        });
+        const record = await pb.collection('projects').getOne(id, );
         setData(record  as any);
       } catch (error) {
         setError(error as any);
@@ -23,7 +21,7 @@ export default function useGetProject(id : string) {
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   return [data, loading, error];
 }

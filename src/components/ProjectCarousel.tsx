@@ -4,7 +4,6 @@ import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 
 interface ProjectCarouselProps {
-  galleryID: string;
   images: {
     largeURL: string;
     thumbnailURL: string;
@@ -36,7 +35,7 @@ const ProjectCarousel: FC<ProjectCarouselProps> = (props) => {
         <img
           src={props.images[activeIndex].largeURL}
           alt=''
-          className='max-h-[50vh] w-full object-cover mx-auto'
+          className='max-h-[50vh] w-full object-contain mx-auto'
         />
       </div>
       <div className='flex gap-2 mt-2' id={props.galleryID}>
@@ -55,7 +54,7 @@ const ProjectCarousel: FC<ProjectCarouselProps> = (props) => {
             <img
               src={image.largeURL}
               alt=''
-              className='object-cover w-full h-full'
+              className='object-contain w-full h-full'
             />
           </a>
         ))}
