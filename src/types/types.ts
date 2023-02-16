@@ -1,17 +1,27 @@
 export interface Project {
-    map: () => any,
-    collectionId: string;
-    collectionName: string;
-    created: string;
-    field: {
-      name: string;
-      tools: string[];
-      description: string;
-      images: string[];
-      URL: string;
-    };
-    field1: string;
-    id: string;
-    updated: string;
-    expand: Record<string, unknown>;
-  }
+  collectionId: string;
+  collectionName: string;
+  created: string;
+  description: string;
+  id: string;
+  images: {
+    largeURL: string;
+    thumbnailURL: string;
+    width: number;
+    height: number;
+  }[];
+  name: string;
+  tools: string[];
+  updated: string;
+  expand: object;
+}
+
+
+export interface Error {
+  url: string;
+  status: number;
+  data: {};
+  isAbort: boolean;
+  originalError: {};
+  name: string;
+}

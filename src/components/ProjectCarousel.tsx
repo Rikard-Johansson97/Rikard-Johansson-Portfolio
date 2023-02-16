@@ -29,16 +29,18 @@ const ProjectCarousel: FC<ProjectCarouselProps> = (props) => {
     };
   }, []);
 
+  console.log(props);
+
   return (
     <div className='flex-1 max-w-5xl mx-auto  max-h-[70vh]'>
-      <div className='flex justify-center items-center'>
+      <div className='flex justify-center items-center bg-background p-4'>
         <img
           src={props.images[activeIndex].largeURL}
           alt=''
-          className='max-h-[50vh] w-full object-contain mx-auto'
+          className='max-h-[30vh] w-full object-contain mx-auto rounded-xl'
         />
       </div>
-      <div className='flex gap-2 mt-2' id={props.galleryID}>
+      <div className='flex gap-2 mt-4' id={props.galleryID}>
         {props.images.map((image, index: number) => (
           <a
             href={image.largeURL}
@@ -54,7 +56,7 @@ const ProjectCarousel: FC<ProjectCarouselProps> = (props) => {
             <img
               src={image.largeURL}
               alt=''
-              className='object-contain w-full h-full'
+              className='object-contain w-full h-full bg-background'
             />
           </a>
         ))}

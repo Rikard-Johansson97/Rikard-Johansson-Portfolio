@@ -13,8 +13,6 @@ const Projects: FC<ProjectsProps> = ({}) => {
 
   if (loading) return <h1>Loading</h1>;
 
-  console.log(JSON.stringify(data));
-
   return (
     <div
       id='projects'
