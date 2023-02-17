@@ -25,10 +25,10 @@ const Banner: FC<BannerProps> = ({}) => {
             />
           </div>
           <p className='text-sm text-paragraph'>
-            Jag är en passionerad och målinriktad person som älskar att skapa
-            användbara lösningar. Det är min drivkraft som motiverar mig att
-            göra mitt bästa. Att bygga något från grunden och se det ta form är
-            så jäkla häftigt, och det är verkligen något som jag brinner för.
+            Jag brinner för att skapa användbara lösningar och älskar att utmana
+            mig själv med nya projekt. Att se mina idéer ta form ger mig stor
+            tillfredsställelse och motivation. Jag tror på att alltid sträva
+            efter att utvecklas och lära mig nya saker för att bli en bättre
           </p>
         </div>
 

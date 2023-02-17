@@ -22,6 +22,7 @@ export interface ProjectData {
   expand: {};
   domain:string,
   github: string;
+  poster: string;
 };
 
 export interface Error {

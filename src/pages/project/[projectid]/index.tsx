@@ -1,4 +1,4 @@
-import ProjectCarousel from "@/components/ProjectCarousel";
+import ProjectCarousel from "@/components/ImageGallery";
 import useGetProject from "@/lib/Project";
 import { Chip, IconButton } from "@mui/material";
 import type { NextPage } from "next";
@@ -20,12 +20,12 @@ const Index: NextPage = () => {
   const html: string = data?.description;
 
   return (
-    <div className='flex-1 mx-auto mt-16 p-4'>
+    <div className='flex-1 mx-auto bg-black bg-[url("https://www.transparenttextures.com/patterns/cartographer.png")] pt-6'>
       {data?.images && (
         <ProjectCarousel galleryID='my-test-gallery' images={data?.images} />
       )}
-      <div className='mt-4 flex flex-col max-w-5xl mx-auto items-start'>
-        <div className='flex'>
+      <div className='mt-4 flex flex-col max-w-5xl mx-auto items-start bg-background p-4 border-t-2 border-greenText shadow-inner '>
+        <div className='flex '>
           {data?.github && (
             <IconButton>
               <Link href={data?.github} target='_blank'>

@@ -11,16 +11,16 @@ interface ProjectCarouselProps {
   }[];
 }
 
-const ProjectCarousel: FC<ProjectCarouselProps> = ({ galleryID, images }) => {
+const ImageGallery: FC<ProjectCarouselProps> = ({ galleryID, images }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className=' max-w-5xl mx-auto '>
+    <div className=' max-w-5xl mx-auto p-4'>
       <div className='flex justify-center h-[50vh] items-center  p-4'>
         <img
           src={images[activeIndex].largeURL}
           alt=''
-          className='h-full w-full object-contain mx-auto rounded-xl'
+          className='h-full w-full object-contain mx-auto rounded-xl drop-shadow-lg'
         />
       </div>
       <div className='flex gap-2 mt-2' id={galleryID}>
@@ -44,4 +44,4 @@ const ProjectCarousel: FC<ProjectCarouselProps> = ({ galleryID, images }) => {
   );
 };
 
-export default ProjectCarousel;
+export default ImageGallery;

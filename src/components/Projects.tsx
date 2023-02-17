@@ -13,8 +13,6 @@ const Projects: FC<ProjectsProps> = ({}) => {
 
   if (loading) return <h1>Loading</h1>;
 
-  const projects = data;
-
   return (
     <div
       id='projects'
@@ -27,7 +25,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
         {data?.map((project: ProjectData, i: number) => (
           <div key={i} className=' rounded-xl'>
             <div className='relative'>
-              <div className=' absolute transition duration-300 opacity:0 hover:opacity-80 hover:bg-black hover:border-2 z-10 flex items-center justify-center w-full h-full group rounded-xl'>
+              <div className=' absolute transition duration-200 opacity:0 hover:opacity-60 hover:bg-black hover:border-2 hover:border-greenText z-10 flex items-center justify-center w-full h-full group rounded-xl'>
                 <Button
                   variant='outlined'
                   className='absolute py-2 px-4 text-paragraph text-lg hover:text-headline border-paragraph hover:border-headline transition duration-300 opacity-0 group-hover:opacity-100 '>
@@ -36,7 +34,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
               </div>
               <img
                 className='aspect-square shadow-xl object-cover rounded-xl'
-                src={project?.images[0].thumbnailURL}
+                src={project?.poster}
                 alt={project?.name}
               />
             </div>
@@ -44,14 +42,19 @@ const Projects: FC<ProjectsProps> = ({}) => {
               {project?.name}
             </h3>
             <div className='flex gap-2 flex-wrap'>
-              {project?.tools.map((item, i) => (
+              {project?.tools.slice(0, 2).map((item, i) => (
                 <Chip
                   key={i}
                   label={item}
                   variant='outlined'
-                  className='text-paragraph text- border-greenText'
+                  className='text-paragraph text-xs border-greenText shadow-md'
                 />
               ))}
+              <Chip
+                label={"+ " + String(project?.tools.length - 2)}
+                variant='outlined'
+                className='text-paragraph text-xs border-greenText shadow-md'
+              />
             </div>
           </div>
         ))}
