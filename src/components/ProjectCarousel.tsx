@@ -1,10 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React, { FC, useEffect, useState } from "react";
-import PhotoSwipe from "photoswipe";
-import PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default";
-import PhotoSwipeLightbox from "photoswipe/lightbox";
-import "photoswipe/style.css";
-
 interface ProjectCarouselProps {
   galleryID: string;
   images: {
@@ -15,53 +11,33 @@ interface ProjectCarouselProps {
   }[];
 }
 
-const ProjectCarousel: FC<ProjectCarouselProps> = (props) => {
+const ProjectCarousel: FC<ProjectCarouselProps> = ({ galleryID, images }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  useEffect(() => {
-    let lightbox = new PhotoSwipeLightbox({
-      gallery: "#" + props.galleryID,
-      children: "a",
-      pswpModule: () => import("photoswipe"),
-    });
-
-    lightbox.init();
-
-    return () => {
-      lightbox.destroy();
-      lightbox = null;
-    };
-  }, []);
-
-  console.log(props);
 
   return (
-    <div className='flex-1 max-w-5xl mx-auto  max-h-[70vh]'>
-      <div className='flex justify-center items-center bg-background p-4'>
+    <div className=' max-w-5xl mx-auto '>
+      <div className='flex justify-center h-[50vh] items-center  p-4'>
         <img
-          src={props.images[activeIndex].largeURL}
+          src={images[activeIndex].largeURL}
           alt=''
-          className='max-h-[30vh] w-full object-contain mx-auto rounded-xl'
+          className='h-full w-full object-contain mx-auto rounded-xl'
         />
       </div>
-      <div className='flex gap-2 mt-4' id={props.galleryID}>
-        {props.images.map((image, index: number) => (
-          <a
-            href={image.largeURL}
-            data-pswp-width={image.width}
-            data-pswp-height={image.height}
-            key={props.galleryID + "-" + index}
-            target='_blank'
-            rel='noreferrer'
-            className='flex-1  aspect-square'
+      <div className='flex gap-2 mt-2' id={galleryID}>
+        {images.map((image, index: number) => (
+          <div
+            key={galleryID + "-" + index}
             onClick={() => {
               setActiveIndex(index);
             }}>
-            <img
+            <Image
               src={image.largeURL}
-              alt=''
-              className='object-contain w-full h-full bg-background'
+              alt='Thumbnail'
+              width={image.width}
+              height={image.height}
+              className='object-contain w-full h-full flex-1 shadow-lg border-2 rounded-md cursor-pointer duration-200 hover:border-greenText '
             />
-          </a>
+          </div>
         ))}
       </div>
     </div>

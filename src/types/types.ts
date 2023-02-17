@@ -4,7 +4,7 @@ export type Project = [
   any
 ]
 
-export type ProjectData = {
+export interface ProjectData {
   collectionId: string;
   collectionName: string;
   created: string;
@@ -20,6 +20,8 @@ export type ProjectData = {
   tools: string[];
   updated: string;
   expand: {};
+  domain:string,
+  github: string;
 };
 
 export interface Error {
