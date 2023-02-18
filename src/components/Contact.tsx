@@ -28,13 +28,14 @@ const Contact: FC<ContactProps> = ({}) => {
   return (
     <div
       id='contact'
-      className='flex flex-col items-center justify-center p-4 bg-background'>
+      className='flex flex-col items-center justify-center p-4 bg-background '>
       <h3 className='text-headline text-xl font-bold'>Contact Me</h3>
-      <p className='text-paragraph text-center'>
-        If you are interested in hiring me, please contact me via email or
-        phone. I look forward to hearing from you and discussing how I can help.
+      <p className='text-paragraph text-center max-w-2xl'>
+        Om du är intresserad av att anställa mig, vänligen kontakta mig via
+        e-post eller telefon. Jag ser fram emot att höra från dig och diskutera
+        hur jag kan hjälpa till.
       </p>
-      <div className='flex justify-evenly w-full max-w-2xl p-4 flex-col sm:flex-row'>
+      <div className='grid grid-flow-col  justify-evenly w-full  p-4 max-w-2xl'>
         {contacts.map((item, i) => (
           <div key={i} className='flex flex-col text-center p-2'>
             <div>

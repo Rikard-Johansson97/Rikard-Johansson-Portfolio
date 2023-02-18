@@ -20,11 +20,11 @@ const Index: NextPage = () => {
   const html: string = data?.description;
 
   return (
-    <div className='flex-1 mx-auto bg-black bg-[url("https://www.transparenttextures.com/patterns/cartographer.png")] pt-6'>
+    <div className='flex-1  mx-auto bg-black bg-[url("https://www.transparenttextures.com/patterns/cartographer.png")] py-6'>
       {data?.images && (
         <ProjectCarousel galleryID='my-test-gallery' images={data?.images} />
       )}
-      <div className='mt-4 flex flex-col max-w-5xl mx-auto items-start bg-background p-4 border-t-2 border-greenText shadow-inner '>
+      <div className='mt-4 flex flex-col max-w-5xl mx-auto items-start bg-background p-4  border-2 border-greenText shadow-xl rounded'>
         <div className='flex '>
           {data?.github && (
             <IconButton>

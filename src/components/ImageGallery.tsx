@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import React, { FC, useEffect, useState } from "react";
+import CloseIcon from "@mui/icons-material/Close";
 interface ProjectCarouselProps {
   galleryID: string;
   images: {
@@ -12,14 +13,46 @@ interface ProjectCarouselProps {
 }
 
 const ImageGallery: FC<ProjectCarouselProps> = ({ galleryID, images }) => {
+  const [showImage, setShowImage] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number>(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (showImage) setShowImage(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [showImage]);
 
   return (
     <div className=' max-w-5xl mx-auto p-4'>
-      <div className='flex justify-center h-[50vh] items-center  p-4'>
-        <img
+      {showImage && (
+        <div
+          className='absolute flex justify-center items-center duration-300 transition-all bg-black bg-opacity-80 h-full w-full top-0 left-0 z-50 p-4'
+          onClick={() => setShowImage(!showImage)}>
+          <div className='text-end cursor-pointer'>
+            <CloseIcon
+              fontSize='large'
+              className='text-paragraph hover:text-headline '
+            />
+            <Image
+              src={images[activeIndex].largeURL}
+              height={images[activeIndex].height}
+              width={images[activeIndex].width}
+              alt='Full-image'
+              className='max-h-[90vh] w-full object-contain mx-auto rounded-xl drop-shadow-lg cursor-zoom-out'
+            />
+          </div>
+        </div>
+      )}
+
+      <div className='flex justify-center h-[50vh] items-center  p-4 cursor-zoom-in'>
+        <Image
+          onClick={() => setShowImage(!showImage)}
           src={images[activeIndex].largeURL}
-          alt=''
+          height={images[activeIndex].height}
+          width={images[activeIndex].width}
+          alt='Full-image'
           className='h-full w-full object-contain mx-auto rounded-xl drop-shadow-lg'
         />
       </div>
