@@ -28,8 +28,8 @@ const Contact: FC<ContactProps> = ({}) => {
   return (
     <div
       id='contact'
-      className='flex flex-col items-center justify-center p-4 bg-background '>
-      <h3 className='text-headline text-xl font-bold'>Contact Me</h3>
+      className='flex flex-col items-center justify-center bg-background shadow-inner p-4'>
+      <h3 className='text-headline text-xl font-bold  pb-4'>Kontakta Mig</h3>
       <p className='text-paragraph text-center max-w-2xl'>
         Om du är intresserad av att anställa mig, vänligen kontakta mig via
         e-post eller telefon. Jag ser fram emot att höra från dig och diskutera
