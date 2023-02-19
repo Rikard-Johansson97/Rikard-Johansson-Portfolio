@@ -9,17 +9,17 @@ interface ContactProps {}
 
 const contacts = [
   {
-    icon: <RoomIcon />,
+    icon: <RoomIcon style={{ color: "#2cb67d" }} />,
     name: "ADRESS",
     content: "Halland, Varberg",
   },
   {
-    icon: <AlternateEmailIcon />,
+    icon: <AlternateEmailIcon style={{ color: "#2cb67d" }} />,
     name: "EMAIL",
     content: "rikard.johansson.1997@gmail.com",
   },
   {
-    icon: <PhoneIcon />,
+    icon: <PhoneIcon style={{ color: "#2cb67d" }} />,
     name: "PHONE",
     content: "+46 70 847 66 66",
   },

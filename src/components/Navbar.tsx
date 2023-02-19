@@ -23,25 +23,29 @@ const navigation: NavigationType[] = [
     name: "Home",
     href: "/",
     current: true,
-    icon: <HomeOutlinedIcon fontSize='large' />,
+    icon: <HomeOutlinedIcon fontSize='large' style={{ color: "white" }} />,
   },
   {
     name: "Skills",
     href: "#skills",
     current: false,
-    icon: <BookIcon fontSize='large' />,
+    icon: <BookIcon fontSize='large' style={{ color: "white" }} />,
   },
   {
     name: "Projects",
     href: "#projects",
     current: false,
-    icon: <ContentPasteOutlinedIcon fontSize='large' />,
+    icon: (
+      <ContentPasteOutlinedIcon fontSize='large' style={{ color: "white" }} />
+    ),
   },
   {
     name: "Contact",
     href: "#contact",
     current: false,
-    icon: <ContactPageOutlinedIcon fontSize='large' />,
+    icon: (
+      <ContactPageOutlinedIcon fontSize='large' style={{ color: "white" }} />
+    ),
   },
 ];
 

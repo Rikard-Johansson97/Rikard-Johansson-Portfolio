@@ -32,6 +32,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                 <div className='relative'>
                   <div className=' absolute transition duration-200 opacity:0 hover:opacity-60 hover:bg-black hover:border-2 hover:border-greenText z-10 flex items-center justify-center w-full h-full group rounded-xl'>
                     <Button
+                      style={{ color: "white" }}
                       variant='outlined'
                       className='absolute py-2 px-4 text-paragraph text-lg hover:text-headline border-paragraph hover:border-headline transition duration-300 opacity-0 group-hover:opacity-100 '>
                       <Link href={`/project/${project?.id}`}>Inspect</Link>
