@@ -8,11 +8,11 @@ interface FooterProps {}
 
 const navigation = [
   {
-    icon: <GitHubIcon />,
+    icon: <GitHubIcon style={{ color: "#2cb67d" }} />,
     href: "https://github.com/Rikard-Johansson97",
   },
   {
-    icon: <LinkedInIcon />,
+    icon: <LinkedInIcon style={{ color: "#2cb67d" }} />,
     href: "https://www.linkedin.com/in/rikard-johansson-571844249/",
   },
 ];
