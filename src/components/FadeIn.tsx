@@ -7,7 +7,7 @@ interface FadeInProps {
 
 const FadeIn: FC<FadeInProps> = ({ children }) => {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.2,
     triggerOnce: true,
   });
 
