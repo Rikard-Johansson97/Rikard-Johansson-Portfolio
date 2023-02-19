@@ -59,7 +59,9 @@ const Navbar: FC<NavbarProps> = () => {
   };
 
   return (
-    <Disclosure as='nav' className={`absolute w-full`}>
+    <Disclosure
+      as='nav'
+      className={`absolute w-full animate-fade-down animate-once`}>
       {({ open }) => (
         <div
           className={`z-50 relative ${

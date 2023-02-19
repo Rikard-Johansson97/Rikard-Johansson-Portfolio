@@ -17,7 +17,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
     <div
       id='projects'
       className='bg-lightBackground flex flex-col items-center justify-center p-4 shadow-md '>
-      <h3 className='text-2xl font-bold text-headline p-2 '>Projects</h3>
+      <h3 className='text-2xl font-bold text-headline p-2 '>Projekt</h3>
       <p className='text-sm text-paragraph font-semibold text-center '>
         {"Kolla in några av de häftiga projekt jag har arbetat på!"}
       </p>
