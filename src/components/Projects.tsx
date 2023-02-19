@@ -48,18 +48,15 @@ const Projects: FC<ProjectsProps> = ({}) => {
                 </h3>
                 <div className='flex gap-2 flex-wrap'>
                   {project?.tools.slice(0, 2).map((item, i) => (
-                    <Chip
+                    <p
                       key={i}
-                      label={item}
-                      variant='outlined'
-                      className='text-paragraph text-xs border-greenText shadow-md'
-                    />
+                      className='text-paragraph font-semibold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
+                      {item}
+                    </p>
                   ))}
-                  <Chip
-                    label={"+ " + String(project?.tools.length - 2)}
-                    variant='outlined'
-                    className='text-paragraph text-xs border-greenText shadow-md'
-                  />
+                  <p className='text-paragraph font-bold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
+                    {"+ " + String(project?.tools.length - 2)}
+                  </p>
                 </div>
               </div>
             </FadeIn>

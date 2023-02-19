@@ -60,11 +60,11 @@ const Index: NextPage = () => {
         <div className='flex py-4 gap-2 flex-wrap'>
           {data?.tools?.map((tool: string, i: number) => (
             <FadeIn key={i}>
-              <Chip
-                label={tool}
-                variant='outlined'
-                className='text-paragraph font-semibold border-greenText'
-              />
+              <p
+                key={i}
+                className='text-paragraph font-semibold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
+                {tool}
+              </p>
             </FadeIn>
           ))}
         </div>
