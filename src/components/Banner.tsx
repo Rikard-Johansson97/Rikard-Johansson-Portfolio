@@ -13,14 +13,14 @@ const Banner: FC<BannerProps> = ({}) => {
       <div className='flex flex-col items-start sm:flex-row py-10 px-4 max-w-5xl mx-auto gap-6'>
         <div className='flex flex-col items-start justify-center flex-1 gap-4 '>
           <h3 className='text-sm font-bold text-headline bg-highlight border border-paragraph p-2 rounded-lg shadow-lg animate-fade animate-once'>
-            Välkommen till min Portfolio
+            Välkommen till min portfolio!
           </h3>
           <div className='h-16'>
             <Typed
               className='text-3xl font-bold text-headline pt-2 pb-4 animate-fade animate-once'
               strings={[
-                "Hej, jag är Rikard - Webbutvecklare",
-                "Hej, jag är Rikard - Frontend Utvecklare",
+                "Hej, jag är Rikard en Webbutvecklare",
+                "Hej, jag är Rikard en Frontend Utvecklare",
               ]}
               backSpeed={30}
               typeSpeed={80}

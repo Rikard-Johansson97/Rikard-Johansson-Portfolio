@@ -61,7 +61,7 @@ const Navbar: FC<NavbarProps> = () => {
   return (
     <Disclosure
       as='nav'
-      className={`absolute w-full animate-fade-down animate-once`}>
+      className={`absolute w-full animate-fade-down animate-once z-50`}>
       {({ open }) => (
         <div
           className={`z-50 relative ${
@@ -112,7 +112,7 @@ const Navbar: FC<NavbarProps> = () => {
           </div>
 
           <Disclosure.Panel className='sm:hidden '>
-            <div className='space-y-1 px-2 pt-2 pb-3 bg-background  border-b-2 border-greenText'>
+            <div className='space-y-1 px-2 pt-2 pb-3 bg-background  border-b-2 border-greenText '>
               {navigation.map((item) => (
                 <Link
                   scroll={false}

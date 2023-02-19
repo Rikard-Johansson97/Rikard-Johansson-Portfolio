@@ -95,15 +95,15 @@ const SkillCarousel: FC<SkillCarouselProps> = ({}) => {
 
   return (
     <div
-      className={`rounded-xl shadow-inner border-2 border-greenText py-6 mt-8 mb-4 bg-background overflow-hidden drop-shadow-md cursor-grab ${
+      className={`animate-fade-left rounded-xl shadow-inner border-2 border-greenText py-6 mt-8 mb-4 bg-background overflow-hidden drop-shadow-md cursor-grab ${
         drag && " cursor-grabbing"
       }`}
       onMouseDown={() => setDrag(true)}
       onMouseLeave={() => setDrag(false)}
       onMouseUp={() => setDrag(false)}>
       <div ref={ref} className='keen-slider'>
-        <div className='absolute flex flex-col gap-2 items-center justify-center z-10 w-full h-full duration-200 opacity-0 hover:opacity-100 transition-opacity'>
-          <p className='text-xl text-headline'>Swipe left or right</p>
+        <div className='absolute flex flex-col gap-2 items-center justify-center z-10 w-full h-full duration-200 opacity-0 hover:opacity-100 transition-opacity hover:animate-fade  hover:animate-once  hover:animate-ease-in-out  hover:animate-reverse hover:animate-duration-[1000ms] hover:animate-delay-[1000ms]'>
+          <p className='text-xl text-headline '>Swipe left or right</p>
           <SwipeTwoToneIcon className='text-white' fontSize='large' />
         </div>
         {skills.map((skill, i) => (

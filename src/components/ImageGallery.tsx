@@ -53,7 +53,7 @@ const ImageGallery: FC<ProjectCarouselProps> = ({ galleryID, images }) => {
           height={images[activeIndex].height}
           width={images[activeIndex].width}
           alt='Full-image'
-          className='h-full w-full object-contain mx-auto rounded-xl drop-shadow-lg'
+          className='h-full w-full object-contain mx-auto rounded-xl drop-shadow-lg animate-fade'
         />
       </div>
       <div className='flex gap-2 mt-2' id={galleryID}>
@@ -68,7 +68,7 @@ const ImageGallery: FC<ProjectCarouselProps> = ({ galleryID, images }) => {
               alt='Thumbnail'
               width={image.width}
               height={image.height}
-              className='object-contain w-full h-full flex-1 shadow-lg border-2 rounded-md cursor-pointer duration-200 hover:border-greenText '
+              className='object-contain w-full h-full flex-1 shadow-lg border-2 rounded-md cursor-pointer duration-200 hover:border-greenText animate-fade'
             />
           </div>
         ))}
