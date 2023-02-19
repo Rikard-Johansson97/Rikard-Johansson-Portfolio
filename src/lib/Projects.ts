@@ -1,8 +1,6 @@
 import { useState, useEffect, SetStateAction } from 'react';
-import PocketBase from 'pocketbase';
-import { Project } from '@/types/types';
 
-const pb = new PocketBase('http://127.0.0.1:8090');
+import { Project } from '@/types/types';
 
 export default function useGetProjects() {
   const [loading, setLoading] = useState(true);
@@ -12,10 +10,10 @@ export default function useGetProjects() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const records  = await pb.collection("projects").getFullList(200) as Project[];
+        const res = await fetch('/api/data.json');
+        const records = await res.json();
         setData(records as Project[]);
       } catch (error) {
-        
         setError(error as any);
       } finally {
         setLoading(false);

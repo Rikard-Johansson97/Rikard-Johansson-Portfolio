@@ -1,0 +1,261 @@
+[
+    {
+      "collectionId": "31dklwqbl5dw9aq",
+      "collectionName": "projects",
+      "created": "2023-02-14 15:44:35.209Z",
+      "description": "<p>Jag har byggt en snabb och s&ouml;ml&ouml;s biobiljettbokningsapplikation med hj&auml;lp av kraftfulla tekniska verktyg. Next.js, ett popul&auml;rt ramverk med inbyggd serverrendering, s&auml;kerst&auml;ller att applikationen laddas snabbt f&ouml;r anv&auml;ndaren. Stilfulla gr&auml;nssnitt skapas med hj&auml;lp av Tailwind, ett enkelt CSS-ramverk f&ouml;r responsiva och anpassningsbara gr&auml;nssnitt.</p>\r\n<p>&nbsp;</p>\r\n<p>Jag anv&auml;nder ocks&aring; MongoDB, en NoSQL-databas f&ouml;r att lagra och h&auml;mta biljettinformation. Detta m&ouml;jligg&ouml;r snabba s&ouml;kningar och effektiv hantering av data. F&ouml;r att hantera tillst&aring;ndet och dela data mellan komponenter, har jag anv&auml;nt Redux, vilket har skapat en centraliserad \"store\" f&ouml;r lagring och h&auml;mtning av data fr&aring;n olika delar av applikationen.</p>\r\n<p>&nbsp;</p>\r\n<p>Jag har valt Klarna API f&ouml;r betalning, vilket g&ouml;r det enkelt f&ouml;r anv&auml;ndare att betala f&ouml;r sina biljetter och f&ouml;rb&auml;ttrar anv&auml;ndarupplevelsen. Slutligen anv&auml;nder jag ocks&aring; TypeScript f&ouml;r att skriva mer robust och typs&auml;ker kod, vilket minskar risken f&ouml;r buggar och fel.</p>\r\n<p>&nbsp;</p>\r\n<p>Med dessa kraftfulla tekniska verktyg har jag byggt en robust och anv&auml;ndarv&auml;nlig biobiljettbokningsapplikation som kan hantera stora m&auml;ngder data och k&ouml;ptransaktioner med h&ouml;g s&auml;kerhet och prestanda.</p>",
+      "domain": "https://netflix-cinema.vercel.app/",
+      "github": "https://github.com/Rikard-Johansson97/netflix-Cinema",
+      "id": "wce7rz6znv07vm5",
+      "images": [
+        {
+          "largeURL": "https://i.imgur.com/34CZTXx.png",
+          "thumbnailURL": "https://i.imgur.com/34CZTXx.png",
+          "width": 1920,
+          "height": 900
+        },
+        {
+          "largeURL": "https://i.imgur.com/EhJGP9R.png",
+          "thumbnailURL": "https://i.imgur.com/EhJGP9R.png",
+          "width": 1920,
+          "height": 900
+        },
+        {
+          "largeURL": "https://i.imgur.com/61vyehk.png",
+          "thumbnailURL": "https://i.imgur.com/61vyehk.png",
+          "width": 1920,
+          "height": 900
+        },
+        {
+          "largeURL": "https://i.imgur.com/ERq9DSi.png",
+          "thumbnailURL": "https://i.imgur.com/ERq9DSi.png",
+          "width": 488,
+          "height": 900
+        },
+        {
+          "largeURL": "https://i.imgur.com/pkOR3L6.png",
+          "thumbnailURL": "https://i.imgur.com/pkOR3L6.png",
+          "width": 488,
+          "height": 900
+        }
+      ],
+      "name": "Netflix Cinema",
+      "poster": "https://i.imgur.com/NzDG5aY.jpg",
+      "tools": [
+        "TypeScript",
+        "Next.JS",
+        "Tailwind",
+        "Mongo DB",
+        "Redux",
+        "Klarna API",
+        "Youtube API"
+      ],
+      "updated": "2023-02-17 19:39:54.369Z",
+      "expand": {}
+    },
+    {
+      "collectionId": "31dklwqbl5dw9aq",
+      "collectionName": "projects",
+      "created": "2023-02-14 16:35:42.984Z",
+      "description": "<p>Jag har anv&auml;nt flera tekniska verktyg f&ouml;r att bygga en Spotify-klon som fungerar s&ouml;ml&ouml;st. Genom att anv&auml;nda React Router kunde jag skapa en smidig navigationsupplevelse mellan olika delar av min applikation.<br><br></p>\r\n<p>F&ouml;r att lagra och h&auml;mta data fr&aring;n olika delar av min applikation skapade jag en centraliserad \"store\" med hj&auml;lp av React-redux och redux-toolkit. Genom att anv&auml;nda Spotify-web-api-node kunde jag h&auml;mta data fr&aring;n Spotify API via en Node.js-server.<br><br></p>\r\n<p>F&ouml;r att s&auml;kerst&auml;lla att koden var robust och typs&auml;ker valde jag att anv&auml;nda TypeScript, som &auml;r ett programmeringsspr&aring;k som bygger p&aring; JavaScript. Detta minskade risken f&ouml;r buggar och fel och gjorde koden mer p&aring;litlig. Stylingen av applikationen gjordes i Material UI, ett ramverk f&ouml;r React som erbjuder f&auml;rdiga komponenter och ett enkelt s&auml;tt att skapa en enhetlig design p&aring; ett effektivt s&auml;tt.<br><br><br>OBS! Jag vill po&auml;ngtera att l&auml;nken till min Spotify-klon tyv&auml;rr inte fungerar eftersom Spotify API endast till&aring;ter &aring;tkomst fr&aring;n adminstrat&ouml;rens IP-adress. Tyv&auml;rr kan jag inte tillhandah&aring;lla en fungerande l&auml;nk till applikationen, men jag hoppas att min beskrivning av teknikerna som anv&auml;ndes ger en uppfattning om vad som kr&auml;vs f&ouml;r att bygga en Spotify-klon med moderna tekniska verktyg.</p>",
+      "domain": "",
+      "github": "https://github.com/Rikard-Johansson97/spotify-clone",
+      "id": "f3eag4g0m265jfc",
+      "images": [
+        {
+          "largeURL": "https://i.imgur.com/LhgFZyB.png",
+          "thumbnailURL": "https://i.imgur.com/LhgFZyB.png",
+          "width": 1920,
+          "height": 930
+        },
+        {
+          "largeURL": "https://i.imgur.com/jbegUAd.png",
+          "thumbnailURL": "https://i.imgur.com/jbegUAd.png",
+          "width": 1920,
+          "height": 930
+        },
+        {
+          "largeURL": "https://i.imgur.com/PmpKA9K.png",
+          "thumbnailURL": "https://i.imgur.com/PmpKA9K.png",
+          "width": 930,
+          "height": 490
+        },
+        {
+          "largeURL": "https://i.imgur.com/CKm2WN0.png",
+          "thumbnailURL": "https://i.imgur.com/CKm2WN0.png",
+          "width": 930,
+          "height": 490
+        },
+        {
+          "largeURL": "https://i.imgur.com/MPg47Cj.png",
+          "thumbnailURL": "https://i.imgur.com/MPg47Cj.png",
+          "width": 930,
+          "height": 490
+        }
+      ],
+      "name": "Spotify Clone",
+      "poster": "https://i.imgur.com/sYxN5ok.jpg",
+      "tools": [
+        "React",
+        "TypeScript",
+        "Redux",
+        "Spotify Api",
+        "Material UI"
+      ],
+      "updated": "2023-02-19 13:48:23.112Z",
+      "expand": {}
+    },
+    {
+      "collectionId": "31dklwqbl5dw9aq",
+      "collectionName": "projects",
+      "created": "2023-02-14 18:00:31.142Z",
+      "description": "<div>F&ouml;r att bygga min Airbnb-kopia har jag valt att anv&auml;nda mig av JavaScript och React som huvudsakliga tekniska verktyg. Jag har anv&auml;nt React f&ouml;r att bygga ett interaktivt och anv&auml;ndarv&auml;nligt gr&auml;nssnitt, vilket &auml;r viktigt f&ouml;r att skapa en upplevelse som liknar Airbnb.</div>\r\n<div>&nbsp;</div>\r\n<div>F&ouml;r att styla min applikation har jag anv&auml;nt Sass, vilket har hj&auml;lpt mig att skapa en mer dynamisk och anpassningsbar anv&auml;ndargr&auml;nssnitt.</div>\r\n<div>&nbsp;</div>\r\n<div>F&ouml;r att hantera data och interaktioner med min applikation, har jag valt att anv&auml;nda Mongoose, som &auml;r en ODM (Object Document Mapper) f&ouml;r MongoDB. Mongoose har hj&auml;lpt mig att hantera databasf&ouml;rfr&aring;gningar och samla in data fr&aring;n anv&auml;ndare p&aring; ett effektivt s&auml;tt.</div>\r\n<div>&nbsp;</div>\r\n<div>Jag har ocks&aring; anv&auml;nt Express, som &auml;r en popul&auml;r webbapplikationsramverk f&ouml;r Node.js. Genom att anv&auml;nda Express har jag kunnat skapa en robust och skalbar applikation som kan hantera stora m&auml;ngder data och trafik.</div>\r\n<div>&nbsp;</div>\r\n<div>Genom att kombinera dessa olika tekniska verktyg har jag byggt en anv&auml;ndarv&auml;nlig och anpassningsbar Airbnb-kopia, som kan hantera stora m&auml;ngder data och ge en s&ouml;ml&ouml;s anv&auml;ndarupplevelse f&ouml;r mina anv&auml;ndare.</div>",
+      "domain": "https://airbnb-mr7qupkjs-rikard-johansson97.vercel.app/",
+      "github": "https://github.com/Rikard-Johansson97/airbnb",
+      "id": "leuhc1meoclmuvn",
+      "images": [
+        {
+          "largeURL": "https://i.imgur.com/YgabpyW.png",
+          "thumbnailURL": "https://i.imgur.com/YgabpyW.png",
+          "width": 1920,
+          "height": 930
+        },
+        {
+          "largeURL": "https://i.imgur.com/lMR5joM.png",
+          "thumbnailURL": "https://i.imgur.com/lMR5joM.png",
+          "width": 1920,
+          "height": 930
+        },
+        {
+          "largeURL": "https://i.imgur.com/afOJG9R.png",
+          "thumbnailURL": "https://i.imgur.com/afOJG9R.png",
+          "width": 1920,
+          "height": 930
+        },
+        {
+          "largeURL": "https://i.imgur.com/sKD7nv3.png",
+          "thumbnailURL": "https://i.imgur.com/sKD7nv3.png",
+          "width": 490,
+          "height": 930
+        },
+        {
+          "largeURL": "https://i.imgur.com/9mxNWNs.png",
+          "thumbnailURL": "https://i.imgur.com/9mxNWNs.png",
+          "width": 490,
+          "height": 930
+        }
+      ],
+      "name": "Airbnb Clone",
+      "poster": "https://i.imgur.com/Us36Xjv.jpg",
+      "tools": [
+        "JavaScript",
+        "React",
+        "Sass",
+        "Mongoose",
+        "Express"
+      ],
+      "updated": "2023-02-17 19:28:47.892Z",
+      "expand": {}
+    },
+    {
+      "collectionId": "31dklwqbl5dw9aq",
+      "collectionName": "projects",
+      "created": "2023-02-14 18:35:45.273Z",
+      "description": "<div>Jag har skapat en HTML-sida som visar en lista med element som ska sorteras. Varje element p&aring; listan har en unik identifierare, som jag har skapat med hj&auml;lp av CSS.</div>\r\n<div>&nbsp;</div>\r\n<div>F&ouml;r att sortera listan har jag anv&auml;nt fyra olika sorteringsalgoritmer:<strong> </strong>bubbel sort, merge sort, quicksort och selectionsort.</div>\r\n<div>&nbsp;</div>\r\n<div>Bubbel sort fungerar genom att j&auml;mf&ouml;ra tv&aring; element &aring;t g&aring;ngen och byta plats p&aring; dem om de inte &auml;r i r&auml;tt ordning. Algoritmen forts&auml;tter att g&aring; igenom listan tills alla element &auml;r i r&auml;tt ordning. Bubbel sort &auml;r en av de enklare algoritmerna, men kan bli l&aring;ngsam p&aring; st&ouml;rre listor.</div>\r\n<div>&nbsp;</div>\r\n<div>Merge sort fungerar genom att dela upp listan i mindre delar och sedan sortera dessa delar. Sedan kombineras delarna i ordning tills hela listan &auml;r sorterad. Merge sort &auml;r en av de snabbaste sorteringsalgoritmerna och fungerar bra p&aring; st&ouml;rre listor.</div>\r\n<div>&nbsp;</div>\r\n<div>Quicksort fungerar genom att v&auml;lja ett \"pivot\" element och dela upp listan i tv&aring; mindre listor, en med element mindre &auml;n pivotelementet och en med element st&ouml;rre &auml;n pivotelementet. Algoritmen forts&auml;tter sedan att dela upp listorna och v&auml;lja nya pivotelement tills hela listan &auml;r sorterad. Quicksort &auml;r ocks&aring; en av de snabbare algoritmerna.</div>\r\n<div>&nbsp;</div>\r\n<div>Selectionsort fungerar genom att v&auml;lja det minsta elementet i listan och placera det p&aring; f&ouml;rsta plats. Sedan v&auml;ljs det n&auml;st minsta elementet och placeras p&aring; andra plats, och s&aring; vidare tills hela listan &auml;r sorterad. Selectionsort &auml;r inte s&auml;rskilt effektiv p&aring; st&ouml;rre listor, men &auml;r enkel att f&ouml;rst&aring; och implementera.</div>\r\n<div>&nbsp;</div>\r\n<div>Jag har implementerat varje sorteringsalgoritm i JavaScript och integrerat dem i min HTML-sida s&aring; att anv&auml;ndaren kan v&auml;lja vilken sorts sortering som ska anv&auml;ndas. Genom att anv&auml;nda olika sorteringsalgoritmer kan jag visa hur olika metoder p&aring;verkar tiden det tar att sortera listan.</div>",
+      "domain": "https://resonant-sherbet-9c964f.netlify.app/",
+      "github": "https://github.com/Rikard-Johansson97/sortVisualizer",
+      "id": "rec8welcvcsdp9k",
+      "images": [
+        {
+          "largeURL": "https://i.imgur.com/5xfe138.jpg",
+          "thumbnailURL": "https://i.imgur.com/5xfe138.jpg",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "largeURL": "https://i.imgur.com/5xfe138.jpg",
+          "thumbnailURL": "https://i.imgur.com/5xfe138.jpg",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "largeURL": "https://i.imgur.com/5xfe138.jpg",
+          "thumbnailURL": "https://i.imgur.com/5xfe138.jpg",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "largeURL": "https://i.imgur.com/5xfe138.jpg",
+          "thumbnailURL": "https://i.imgur.com/5xfe138.jpg",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "largeURL": "https://i.imgur.com/5xfe138.jpg",
+          "thumbnailURL": "https://i.imgur.com/5xfe138.jpg",
+          "width": 1000,
+          "height": 1000
+        }
+      ],
+      "name": "Sorting Algorithm",
+      "poster": "https://i.imgur.com/5xfe138.jpg",
+      "tools": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "updated": "2023-02-18 11:11:03.410Z",
+      "expand": {}
+    },
+    {
+      "collectionId": "31dklwqbl5dw9aq",
+      "collectionName": "projects",
+      "created": "2023-02-18 17:25:25.836Z",
+      "description": "<p>Kanban-tavlor &auml;r ett popul&auml;rt s&auml;tt att visualisera arbetsfl&ouml;den och g&ouml;ra dem mer effektiva. Som utvecklare ville jag skapa en Kanban-tavla som var enkel att anv&auml;nda, men samtidigt flexibel och kraftfull. F&ouml;r att g&ouml;ra detta best&auml;mde jag mig f&ouml;r att anv&auml;nda React, TypeScript, Context Provider och Drag and Drop.</p>\r\n<p>&nbsp;</p>\r\n<p>Jag valde att anv&auml;nda React eftersom det &auml;r en av de mest popul&auml;ra teknologierna f&ouml;r att skapa anv&auml;ndargr&auml;nssnitt, och det &auml;r ocks&aring; v&auml;ldigt flexibelt och skalbart. TypeScript var en naturlig f&ouml;ljeslagare till React, eftersom det hj&auml;lper till att minska risken f&ouml;r buggar och f&ouml;rb&auml;ttra kodens l&auml;sbarhet.</p>\r\n<p>&nbsp;</p>\r\n<p>Context Provider anv&auml;ndes f&ouml;r att hantera state och datahantering, vilket g&ouml;r det enkelt att skicka data mellan olika komponenter i appen. Genom att ha en global variabel f&ouml;r hela appen kan jag l&auml;tt manipulera listor och kort fr&aring;n en central plats, vilket sparar tid och minimerar risken f&ouml;r felaktigheter.</p>\r\n<p>&nbsp;</p>\r\n<p>Slutligen anv&auml;nde jag Drag and Drop f&ouml;r att g&ouml;ra tavlan interaktiv och l&auml;ttanv&auml;nd. Genom att anv&auml;nda React-komponenter f&ouml;r att hantera drag- och sl&auml;ppfunktionalitet kunde jag skapa en smidig och naturlig upplevelse f&ouml;r anv&auml;ndarna. De kunde enkelt flytta kort mellan olika listor, och ordna korten i &ouml;nskad ordning.</p>\r\n<p>&nbsp;</p>\r\n<p>Ut&ouml;ver dessa tekniker skapade jag ocks&aring; funktioner f&ouml;r att l&auml;gga till och redigera kort och listor. Detta gjorde appen &auml;nnu mer m&aring;ngsidig och anpassningsbar, och gjorde det m&ouml;jligt f&ouml;r anv&auml;ndarna att skr&auml;ddarsy tavlan efter deras specifika behov.</p>\r\n<p>&nbsp;</p>\r\n<p>Sammanfattningsvis var det en fantastisk kombination av tekniker som gjorde denna Kanban-tavla s&aring; framg&aring;ngsrik. Genom att anv&auml;nda React, TypeScript, Context Provider och Drag and Drop kunde jag skapa en app som var b&aring;de anv&auml;ndarv&auml;nlig och kraftfull, och som hj&auml;lpte mig att organisera mitt arbete p&aring; ett mer effektivt s&auml;tt.</p>",
+      "domain": "https://kanban-board-blond.vercel.app/",
+      "github": "https://github.com/Rikard-Johansson97/kanban-board",
+      "id": "q35la6guqbv0vwu",
+      "images": [
+        {
+          "largeURL": "https://i.imgur.com/dIpnWsy.png",
+          "thumbnailURL": "https://i.imgur.com/dIpnWsy.png",
+          "width": 1920,
+          "height": 930
+        },
+        {
+          "largeURL": "https://i.imgur.com/KL2UFH6.png",
+          "thumbnailURL": "https://i.imgur.com/KL2UFH6.png",
+          "width": 1920,
+          "height": 930
+        },
+        {
+          "largeURL": "https://i.imgur.com/imcNOdl.png",
+          "thumbnailURL": "https://i.imgur.com/imcNOdl.png",
+          "width": 490,
+          "height": 930
+        },
+        {
+          "largeURL": "https://i.imgur.com/7pWkLmk.png",
+          "thumbnailURL": "https://i.imgur.com/7pWkLmk.png",
+          "width": 490,
+          "height": 930
+        },
+        {
+          "largeURL": "https://i.imgur.com/ZDNbiSM.png",
+          "thumbnailURL": "https://i.imgur.com/ZDNbiSM.png",
+          "width": 490,
+          "height": 930
+        }
+      ],
+      "name": "Kanban Board",
+      "poster": "https://i.imgur.com/PoItgpb.jpg",
+      "tools": [
+        "React",
+        "TypeScript",
+        "Context Provider",
+        "Drag and Drop"
+      ],
+      "updated": "2023-02-18 17:31:07.253Z",
+      "expand": {}
+    }
+  ]
