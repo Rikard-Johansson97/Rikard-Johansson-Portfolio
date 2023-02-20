@@ -3,6 +3,43 @@ import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Banner from "@/components/Banner";
+import Timeline from "@/components/Timeline";
+import BookIcon from "@mui/icons-material/Book";
+import ContentPasteOutlinedIcon from "@mui/icons-material/ContentPasteOutlined";
+import ContactPageOutlinedIcon from "@mui/icons-material/ContactPageOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import Navbar from "@/components/Navbar";
+
+const navigation = [
+  {
+    name: "Home",
+    href: "/",
+    current: true,
+    icon: <HomeOutlinedIcon fontSize='large' style={{ color: "white" }} />,
+  },
+  {
+    name: "Skills",
+    href: "#skills",
+    current: false,
+    icon: <BookIcon fontSize='large' style={{ color: "white" }} />,
+  },
+  {
+    name: "Projects",
+    href: "#projects",
+    current: false,
+    icon: (
+      <ContentPasteOutlinedIcon fontSize='large' style={{ color: "white" }} />
+    ),
+  },
+  {
+    name: "Contact",
+    href: "#contact",
+    current: false,
+    icon: (
+      <ContactPageOutlinedIcon fontSize='large' style={{ color: "white" }} />
+    ),
+  },
+];
 
 export default function Home() {
   return (
@@ -34,9 +71,12 @@ export default function Home() {
         <meta name='theme-color' content='#ffffff' />
       </Head>
       <main>
+        <Navbar navigation={navigation} />
         <Banner />
         <Skills />
+        <Timeline />
         <Projects />
+
         <Contact />
       </main>
     </>

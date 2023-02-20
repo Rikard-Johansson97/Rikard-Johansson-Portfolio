@@ -10,6 +10,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import LinkOffIcon from "@mui/icons-material/LinkOff";
+import Navbar from "@/components/Navbar";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 
 const Index: NextPage = () => {
   const router = useRouter();
@@ -19,61 +21,88 @@ const Index: NextPage = () => {
 
   if (loading) return <h1>Loading...</h1>;
 
+  const navigation = [
+    {
+      name: "Home",
+      href: "/",
+      current: true,
+      icon: <HomeOutlinedIcon fontSize='large' style={{ color: "white" }} />,
+    },
+    {
+      name: "Website",
+      href: data?.domain ? data.domain : "/",
+      current: true,
+      icon: data?.domain ? (
+        <Link href={data?.domain} target='_blank'>
+          <LinkIcon fontSize='large' className='text-headline cursor-pointer' />
+        </Link>
+      ) : (
+        <LinkOffIcon
+          fontSize='large'
+          className='text-headline cursor-not-allowed'
+        />
+      ),
+    },
+  ];
+
   const html: string = data?.description;
 
   return (
-    <div className='flex-1  mx-auto bg-black bg-[url("https://www.transparenttextures.com/patterns/cartographer.png")] py-10 '>
-      {data?.images && (
-        <ProjectCarousel galleryID='my-test-gallery' images={data?.images} />
-      )}
-      <div className='mt-4 flex flex-col max-w-5xl items-start bg-background p-4  border-2 border-greenText shadow-xl rounded animate-fade-up mx-4'>
-        <div className='flex '>
-          {data?.github && (
-            <IconButton>
-              <Link href={data?.github} target='_blank'>
-                <GitHubIcon
+    <>
+      <Navbar navigation={navigation} />
+      <div className='flex-1 mx-auto bg-black bg-[url("https://www.transparenttextures.com/patterns/cartographer.png")] py-10 '>
+        {data?.images && (
+          <ProjectCarousel galleryID='my-test-gallery' images={data?.images} />
+        )}
+        <div className='mt-4 flex flex-col max-w-5xl items-start bg-background p-4 shadow-xl rounded animate-fade-up mx-auto'>
+          <div className='flex '>
+            {data?.github && (
+              <IconButton>
+                <Link href={data?.github} target='_blank'>
+                  <GitHubIcon
+                    fontSize='large'
+                    className='text-greenText cursor-pointer'
+                  />
+                </Link>
+              </IconButton>
+            )}
+            {data?.domain ? (
+              <IconButton>
+                <Link href={data?.domain} target='_blank'>
+                  <LinkIcon
+                    fontSize='large'
+                    className='text-greenText cursor-pointer'
+                  />
+                </Link>
+              </IconButton>
+            ) : (
+              <IconButton>
+                <LinkOffIcon
                   fontSize='large'
-                  className='text-greenText cursor-pointer'
+                  className='text-greenText cursor-not-allowed'
                 />
-              </Link>
-            </IconButton>
-          )}
-          {data?.domain ? (
-            <IconButton>
-              <Link href={data?.domain} target='_blank'>
-                <LinkIcon
-                  fontSize='large'
-                  className='text-greenText cursor-pointer'
-                />
-              </Link>
-            </IconButton>
-          ) : (
-            <IconButton>
-              <LinkOffIcon
-                fontSize='large'
-                className='text-greenText cursor-not-allowed'
-              />
-            </IconButton>
-          )}
-        </div>
-        <h2 className='text-2xl text-headline font-bold'>{data?.name}</h2>
-        <div className='flex py-4 gap-2 flex-wrap'>
-          {data?.tools?.map((tool: string, i: number) => (
-            <FadeIn key={i}>
-              <p
-                key={i}
-                className='text-paragraph font-semibold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
-                {tool}
-              </p>
-            </FadeIn>
-          ))}
-        </div>
+              </IconButton>
+            )}
+          </div>
+          <h2 className='text-2xl text-headline font-bold'>{data?.name}</h2>
+          <div className='flex py-4 gap-2 flex-wrap'>
+            {data?.tools?.map((tool: string, i: number) => (
+              <FadeIn key={i}>
+                <p
+                  key={i}
+                  className='text-paragraph font-semibold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
+                  {tool}
+                </p>
+              </FadeIn>
+            ))}
+          </div>
 
-        <div className='text-paragraph font-semibold'>
-          {parse(String(html))}
+          <div className='text-paragraph font-semibold'>
+            {parse(String(html))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

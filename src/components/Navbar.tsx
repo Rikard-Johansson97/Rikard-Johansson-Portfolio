@@ -3,61 +3,28 @@ import { FC, ReactElement, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import BookIcon from "@mui/icons-material/Book";
-import ContentPasteOutlinedIcon from "@mui/icons-material/ContentPasteOutlined";
-import ContactPageOutlinedIcon from "@mui/icons-material/ContactPageOutlined";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+
 import { IconButton } from "@mui/material";
-
-interface NavbarProps {}
-
-interface NavigationType {
+interface NavigationItem {
   name: string;
   href: string;
   current: boolean;
-  icon: ReactElement;
+  icon: JSX.Element;
 }
 
-const navigation: NavigationType[] = [
-  {
-    name: "Home",
-    href: "/",
-    current: true,
-    icon: <HomeOutlinedIcon fontSize='large' style={{ color: "white" }} />,
-  },
-  {
-    name: "Skills",
-    href: "#skills",
-    current: false,
-    icon: <BookIcon fontSize='large' style={{ color: "white" }} />,
-  },
-  {
-    name: "Projects",
-    href: "#projects",
-    current: false,
-    icon: (
-      <ContentPasteOutlinedIcon fontSize='large' style={{ color: "white" }} />
-    ),
-  },
-  {
-    name: "Contact",
-    href: "#contact",
-    current: false,
-    icon: (
-      <ContactPageOutlinedIcon fontSize='large' style={{ color: "white" }} />
-    ),
-  },
-];
-
+interface NavbarProps {
+  navigation: NavigationItem[];
+  map?: any;
+}
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Navbar: FC<NavbarProps> = () => {
+const Navbar: FC<NavbarProps> = ({ navigation }) => {
   const [currentItem, setCurrentItem] = useState(navigation[0]);
   const [open, setOpen] = useState(false);
 
-  const handleItemClick = (item: NavigationType) => {
+  const handleItemClick = (item: NavigationItem) => {
     setCurrentItem({ ...currentItem, current: false });
     setCurrentItem(item);
   };
@@ -73,6 +40,27 @@ const Navbar: FC<NavbarProps> = () => {
           }`}>
           <div className='mx-auto max-w-5xl px-4'>
             <div className='relative flex h-16 items-center justify-between'>
+              <div className='flex w-full justify-end sm:hidden'>
+                <div className='absolute inset-y-0 left-0 flex items-center  '>
+                  <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-paragraph hover:bg-background hover:text-headline focus:outline-none focus:ring-2 focus:ring-inset focus:ring-headline '>
+                    <span className='sr-only'>
+                      {open ? "Close main menu" : "Open main menu"}
+                    </span>
+                    {open ? (
+                      <XMarkIcon className='block h-6 w-6' aria-hidden='true' />
+                    ) : (
+                      <Bars3Icon className='block h-6 w-6' aria-hidden='true' />
+                    )}
+                  </Disclosure.Button>
+                </div>
+                <Link href={"/"}>
+                  <img
+                    className='h-8 w-auto rounded-shape shadow-sm flex-end'
+                    src='https://i.postimg.cc/J4brMKmD/Avatar-Maker.png'
+                    alt='Your Company'
+                  />
+                </Link>
+              </div>
               <div className='absolute inset-y-0 left-0 flex items-center sm:hidden '>
                 <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-paragraph hover:bg-background hover:text-headline focus:outline-none focus:ring-2 focus:ring-inset focus:ring-headline '>
                   <span className='sr-only'>
@@ -95,7 +83,7 @@ const Navbar: FC<NavbarProps> = () => {
                 </div>
                 <div className='hidden sm:ml-6 sm:block '>
                   <div className='flex'>
-                    {navigation.map((item) => (
+                    {navigation.map((item: NavigationItem) => (
                       <Link
                         key={item.name}
                         href={item.href}
@@ -105,7 +93,7 @@ const Navbar: FC<NavbarProps> = () => {
                             ? "underline underline-offset-2 text-headline"
                             : "text-paragraph hover:text-highlight"
                         }`}
-                        onClick={() => handleItemClick(item)}>
+                        onClick={() => handleItemClick(item as NavigationItem)}>
                         {item.name}
                       </Link>
                     ))}
@@ -117,7 +105,7 @@ const Navbar: FC<NavbarProps> = () => {
 
           <Disclosure.Panel className='sm:hidden '>
             <div className='space-y-1 px-2 pt-2 pb-3 bg-background  border-b-2 border-greenText '>
-              {navigation.map((item) => (
+              {navigation.map((item: NavigationItem) => (
                 <Link
                   scroll={false}
                   href={item.href}
