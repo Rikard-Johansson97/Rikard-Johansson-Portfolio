@@ -100,7 +100,7 @@
     "collectionName": "projects",
     "created": "2023-02-14 18:00:31.142Z",
     "description": "<div>F&ouml;r att bygga min Airbnb-kopia har jag valt att anv&auml;nda mig av JavaScript och React som huvudsakliga tekniska verktyg. Jag har anv&auml;nt React f&ouml;r att bygga ett interaktivt och anv&auml;ndarv&auml;nligt gr&auml;nssnitt, vilket &auml;r viktigt f&ouml;r att skapa en upplevelse som liknar Airbnb.</div>\r\n<div>&nbsp;</div>\r\n<div>F&ouml;r att styla min applikation har jag anv&auml;nt Sass, vilket har hj&auml;lpt mig att skapa en mer dynamisk och anpassningsbar anv&auml;ndargr&auml;nssnitt.</div>\r\n<div>&nbsp;</div>\r\n<div>F&ouml;r att hantera data och interaktioner med min applikation, har jag valt att anv&auml;nda Mongoose, som &auml;r en ODM (Object Document Mapper) f&ouml;r MongoDB. Mongoose har hj&auml;lpt mig att hantera databasf&ouml;rfr&aring;gningar och samla in data fr&aring;n anv&auml;ndare p&aring; ett effektivt s&auml;tt.</div>\r\n<div>&nbsp;</div>\r\n<div>Jag har ocks&aring; anv&auml;nt Express, som &auml;r en popul&auml;r webbapplikationsramverk f&ouml;r Node.js. Genom att anv&auml;nda Express har jag kunnat skapa en robust och skalbar applikation som kan hantera stora m&auml;ngder data och trafik.</div>\r\n<div>&nbsp;</div>\r\n<div>Genom att kombinera dessa olika tekniska verktyg har jag byggt en anv&auml;ndarv&auml;nlig och anpassningsbar Airbnb-kopia, som kan hantera stora m&auml;ngder data och ge en s&ouml;ml&ouml;s anv&auml;ndarupplevelse f&ouml;r mina anv&auml;ndare.</div>",
-    "domain": "",
+    "domain": "https://airbnb-jet-nine.vercel.app/",
     "github": "https://github.com/Rikard-Johansson97/airbnb",
     "id": "leuhc1meoclmuvn",
     "images": [
