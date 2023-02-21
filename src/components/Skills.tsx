@@ -8,11 +8,11 @@ const Skills: FC<SkillsProps> = ({}) => {
   return (
     <div
       id='skills'
-      className='mx-auto flex flex-col items-center justify-center p-4 bg-background'>
+      className='mx-auto flex flex-col items-center justify-center p-4 pt-10 bg-background'>
       <FadeIn>
         <div className='max-w-5xl  text-center'>
           <h3 className='text-xl font-bold text-headline p-2'>
-            Min tekniska kompetens
+            Teknisk kompetens
           </h3>
           <p className='text-paragraph text-sm mx-8 sm:mx-0'>
             Jag är en MERN-stack webbutvecklare med praktisk erfarenhet inom

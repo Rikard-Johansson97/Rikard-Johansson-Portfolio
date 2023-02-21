@@ -32,7 +32,7 @@ interface TimelineProps {}
 
 const Timeline: FC<TimelineProps> = ({}) => {
   return (
-    <div className='pl-4 max-w-5xl mx-auto bg-background'>
+    <div className='pl-4 pt-10 max-w-5xl mx-auto bg-background'>
       <h3 className='text-xl text-center font-bold text-headline py-2'>
         Min utvecklings resa
       </h3>
