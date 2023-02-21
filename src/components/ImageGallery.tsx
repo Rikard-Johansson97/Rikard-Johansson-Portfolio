@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React, { FC, useEffect, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import PhoneIphoneOutlinedIcon from "@mui/icons-material/PhoneIphoneOutlined";
+import DesktopWindowsOutlinedIcon from "@mui/icons-material/DesktopWindowsOutlined";
 interface ProjectCarouselProps {
   galleryID: string;
   images: {
@@ -9,10 +11,16 @@ interface ProjectCarouselProps {
     thumbnailURL: string;
     width: number;
     height: number;
+    display: string;
   }[];
+  poster: string;
 }
 
-const ImageGallery: FC<ProjectCarouselProps> = ({ galleryID, images }) => {
+const ImageGallery: FC<ProjectCarouselProps> = ({
+  galleryID,
+  images,
+  poster,
+}) => {
   const [showImage, setShowImage] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
@@ -46,30 +54,42 @@ const ImageGallery: FC<ProjectCarouselProps> = ({ galleryID, images }) => {
         </div>
       )}
 
-      <div className='flex justify-center h-[50vh] items-center  p-4 cursor-zoom-in'>
-        <Image
-          onClick={() => setShowImage(!showImage)}
-          src={images[activeIndex].largeURL}
-          height={images[activeIndex].height}
-          width={images[activeIndex].width}
-          alt='Full-image'
-          className='h-full w-full object-contain mx-auto rounded-xl drop-shadow-lg animate-fade'
-        />
+      <div className='flex justify-center h-[50vh] items-center  p-4 '>
+        {images[activeIndex]?.largeURL ? (
+          <Image
+            onClick={() => setShowImage(!showImage)}
+            src={images[activeIndex].largeURL}
+            height={images[activeIndex].height}
+            width={images[activeIndex].width}
+            alt='Full-image'
+            className='h-full w-full object-contain mx-auto rounded-xl drop-shadow-lg animate-fade cursor-zoom-in'
+          />
+        ) : (
+          <Image
+            src={poster}
+            height={1000}
+            width={1000}
+            alt='Full-image'
+            className='h-full w-full object-contain mx-auto rounded-xl drop-shadow-lg animate-fade'
+          />
+        )}
       </div>
-      <div className='flex gap-2 mt-2' id={galleryID}>
+      <div className='flex gap-4 mt-2' id={galleryID}>
         {images.map((image, index: number) => (
           <div
+            className='flex flex-col  bg-lightBackground p-2 rounded-md hover:brightness-125 duration-200 cursor-pointer flex-1'
             key={galleryID + "-" + index}
             onClick={() => {
               setActiveIndex(index);
             }}>
-            <Image
-              src={image.largeURL}
-              alt='Thumbnail'
-              width={image.width}
-              height={image.height}
-              className='object-contain w-full h-full flex-1 shadow-lg border-2 rounded-md cursor-pointer duration-200 hover:border-greenText animate-fade'
-            />
+            <div className='p-2 text-center'>
+              {image.display === "Mobile" && (
+                <PhoneIphoneOutlinedIcon style={{ color: "white" }} />
+              )}
+              {image.display === "Desktop" && (
+                <DesktopWindowsOutlinedIcon style={{ color: "white" }} />
+              )}
+            </div>
           </div>
         ))}
       </div>

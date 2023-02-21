@@ -15,7 +15,7 @@
 
   scroll-behavior: smooth;
 	scrollbar-width: auto;
-	scrollbar-color: #ffffff40;
+	scrollbar-color: black;
 }
 
 html,body{
@@ -32,14 +32,14 @@ html,body{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2cb67d60;
+  background-color: #3d3d3d60;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover,
 ::-webkit-scrollbar-thumb:active {
-  background-color: #2cb67d;
+  background-color: #3d3d3d;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }

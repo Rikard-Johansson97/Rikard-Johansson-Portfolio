@@ -12,19 +12,19 @@ import Navbar from "@/components/Navbar";
 
 const navigation = [
   {
-    name: "Home",
+    name: "Hem",
     href: "/",
     current: true,
     icon: <HomeOutlinedIcon fontSize='large' style={{ color: "white" }} />,
   },
   {
-    name: "Skills",
+    name: "Kompetens",
     href: "#skills",
     current: false,
     icon: <BookIcon fontSize='large' style={{ color: "white" }} />,
   },
   {
-    name: "Projects",
+    name: "Projekt",
     href: "#projects",
     current: false,
     icon: (
@@ -32,7 +32,7 @@ const navigation = [
     ),
   },
   {
-    name: "Contact",
+    name: "Kontakta mig",
     href: "#contact",
     current: false,
     icon: (

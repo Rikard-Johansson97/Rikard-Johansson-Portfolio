@@ -9,17 +9,17 @@ interface ContactProps {}
 
 const contacts = [
   {
-    icon: <RoomIcon style={{ color: "#2cb67d" }} />,
+    icon: <RoomIcon style={{ color: "#1DB954" }} />,
     name: "ADRESS",
     content: "Halland, Varberg",
   },
   {
-    icon: <AlternateEmailIcon style={{ color: "#2cb67d" }} />,
+    icon: <AlternateEmailIcon style={{ color: "#1DB954" }} />,
     name: "EMAIL",
     content: "rikard.johansson.1997@gmail.com",
   },
   {
-    icon: <PhoneIcon style={{ color: "#2cb67d" }} />,
+    icon: <PhoneIcon style={{ color: "#1DB954" }} />,
     name: "PHONE",
     content: "+46 70 847 66 66",
   },
@@ -30,9 +30,9 @@ const Contact: FC<ContactProps> = ({}) => {
     <FadeIn>
       <div
         id='contact'
-        className='flex flex-col items-center justify-center bg-background shadow-inner p-4'>
+        className='flex flex-col items-center justify-center bg-lightBackground shadow-md shadow-background pt-6 p-4'>
         <h3 className='text-headline text-xl font-bold  pb-4'>Kontakta Mig</h3>
-        <p className='text-paragraph text-center max-w-2xl'>
+        <p className='text-paragraph text-sm text-center max-w-2xl'>
           Om du är intresserad av att anställa mig, vänligen kontakta mig via
           e-post eller telefon. Jag ser fram emot att höra från dig och
           diskutera hur jag kan hjälpa till.

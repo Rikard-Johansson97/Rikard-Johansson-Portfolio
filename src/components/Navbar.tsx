@@ -91,7 +91,7 @@ const Navbar: FC<NavbarProps> = ({ navigation }) => {
                         className={`px-3 py-2 rounded-md text-sm font-medium ${
                           item === currentItem
                             ? "underline underline-offset-2 text-headline"
-                            : "text-paragraph hover:text-highlight"
+                            : "text-paragraph hover:text-headline"
                         }`}
                         onClick={() => handleItemClick(item as NavigationItem)}>
                         {item.name}

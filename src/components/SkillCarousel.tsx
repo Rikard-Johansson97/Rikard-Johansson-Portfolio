@@ -95,7 +95,7 @@ const SkillCarousel: FC<SkillCarouselProps> = ({}) => {
 
   return (
     <div
-      className={` animate-fade-left shadow-inner border-greenText py-6 mt-8 mb-4 bg-background drop-shadow-md cursor-grab  ${
+      className={` animate-fade-left rounded-lg shadow-lg border-greenText py-6 mt-8 mb-4 duration-400 bg-lightBackground hover:brightness-110 drop-shadow-md cursor-grab ${
         drag && " cursor-grabbing"
       }`}
       onMouseDown={() => setDrag(true)}

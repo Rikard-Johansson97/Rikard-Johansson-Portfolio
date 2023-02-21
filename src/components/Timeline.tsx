@@ -3,8 +3,8 @@ import FadeIn from "./FadeIn";
 
 const timelineItems = [
   {
-    date: "oktober 2020",
-    title: "Min kodresas början 🤩",
+    date: "oktober 2021",
+    title: "Starten på min kodningsresa 🤩",
     description:
       "Jag började lära mig programmering på egen hand vid sidan av mitt tidigare jobb som snickare, och satsade på att lära mig grunderna i HTML, CSS och JavaScript.",
   },
@@ -32,31 +32,33 @@ interface TimelineProps {}
 
 const Timeline: FC<TimelineProps> = ({}) => {
   return (
-    <div className='px-8 max-w-5xl mx-auto'>
+    <div className='pl-4 max-w-5xl mx-auto bg-background'>
       <h3 className='text-xl text-center font-bold text-headline py-2'>
-        Min utvecklingsresa
+        Min utvecklings resa
       </h3>
-      <p className='text-sm text-center font-bold text-paragraph pb-5'>
+      <p className='text-sm text-center text-paragraph pb-5 '>
         Denna tidslinje visar min utbildnings- och utvecklingsresa som
         programmerare. Från min första kodresa på egen hand till bootcamp på
         TechOver Academy. Nedan kan du se några av mina stora prestationer och
         lärdomar på min resa.
       </p>
-      <ol className='relative border-l border-greenText'>
+      <ol className='relative border-l border-greenText '>
         {timelineItems.map((item) => (
           <FadeIn key={item.date}>
-            <li className='mb-10 ml-4'>
-              <div className='absolute w-3 h-3 bg-greenText rounded-full mt-1.5 -left-1.5 border-2 border-headline'></div>
-              <time className='mb-1 text-sm font-normal leading-none text-paragraph'>
-                {item.date}
-              </time>
-              <h3 className='text-lg font-semibold text-headline '>
-                {item.title}
-              </h3>
-              <p className='mb-4 text-base font-normal text-paragraph'>
-                {item.description}
-              </p>
-            </li>
+            <div className='bg-lightBackground rounded-lg m-4 p-2 shadow-lg'>
+              <li className='mb-4 ml-4'>
+                <div className='absolute w-3 h-3 bg-greenText rounded-full mt-1.5 -left-1.5 border-2 border-headline'></div>
+                <time className='mb-1 text-xs font-normal leading-none text-paragraph'>
+                  {item.date}
+                </time>
+                <h3 className='text-base font-bold text-headline '>
+                  {item.title}
+                </h3>
+                <p className='mb-4 text-sm text-paragraph '>
+                  {item.description}
+                </p>
+              </li>
+            </div>
           </FadeIn>
         ))}
       </ol>

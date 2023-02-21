@@ -50,11 +50,15 @@ const Index: NextPage = () => {
   return (
     <>
       <Navbar navigation={navigation} />
-      <div className='flex-1 mx-auto bg-black bg-[url("https://www.transparenttextures.com/patterns/cartographer.png")] py-10 '>
+      <div className='flex-1 mx-auto bg-background py-10 '>
         {data?.images && (
-          <ProjectCarousel galleryID='my-test-gallery' images={data?.images} />
+          <ProjectCarousel
+            galleryID='my-test-gallery'
+            images={data?.images}
+            poster={data?.poster}
+          />
         )}
-        <div className='mt-4 flex flex-col max-w-5xl items-start bg-background p-4 shadow-xl rounded animate-fade-up mx-auto'>
+        <div className='mt-4 flex flex-col max-w-5xl items-start p-4 rounded animate-fade-up mx-auto'>
           <div className='flex '>
             {data?.github && (
               <IconButton>
@@ -97,9 +101,7 @@ const Index: NextPage = () => {
             ))}
           </div>
 
-          <div className='text-paragraph font-semibold'>
-            {parse(String(html))}
-          </div>
+          <div className='text-paragraph'>{parse(String(html))}</div>
         </div>
       </div>
     </>

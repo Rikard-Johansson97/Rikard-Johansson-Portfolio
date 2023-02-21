@@ -11,18 +11,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#16161a",
+        background: "#121212",
         lightBackground: "#1d1d1d",
+
         headline: "#fffffe",
-        paragraph: "#94a1b2",
+        paragraph: "#B3B3B3",
         button: "#7f5af0",
         buttonText: "#fffffe",
-        highlight: "#7f5af0",
-        greenText: "#2cb67d",
+        highlight: "#282828",
+        greenText: "#1db954",
       },
       gridTemplateColumns: {
-        "auto-fill-200": "repeat(auto-fill, minmax(210px, 1fr))",
-        "auto-fit-200": "repeat(auto-fit, minmax(210px, 1fr))",
+        "auto-fill-200": "repeat(auto-fill, minmax(220px, 1fr))",
+        "auto-fit-200": "repeat(auto-fit, minmax(220px, 1fr))",
       },
       aspectRatio: {
         "19/16": "19 / 16",

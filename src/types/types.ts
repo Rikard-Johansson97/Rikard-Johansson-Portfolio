@@ -15,6 +15,7 @@ export interface ProjectData {
     thumbnailURL: string;
     width: number;
     height: number;
+    display: string;
   }[];
   name: string;
   tools: string[];

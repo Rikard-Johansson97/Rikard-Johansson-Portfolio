@@ -14,7 +14,7 @@ const FadeIn: FC<FadeInProps> = ({ children }) => {
   return (
     <div
       ref={ref}
-      className={`opacity-0 ${inView && "opacity-100 animate-fade-up"}`}>
+      className={`opacity-0 ${inView && "opacity-100 animate-fade"}`}>
       {children}
     </div>
   );
