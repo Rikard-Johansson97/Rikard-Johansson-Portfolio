@@ -50,58 +50,60 @@ const Index: NextPage = () => {
   return (
     <>
       <Navbar navigation={navigation} />
-      <div className='flex-1 mx-auto bg-background py-10 '>
-        {data?.images && (
-          <ProjectCarousel
-            galleryID='my-test-gallery'
-            images={data?.images}
-            poster={data?.poster}
-          />
-        )}
-        <div className='mt-4 flex flex-col max-w-5xl items-start p-4 rounded animate-fade-up mx-auto'>
-          <div className='flex '>
-            {data?.github && (
-              <IconButton>
-                <Link href={data?.github} target='_blank'>
-                  <GitHubIcon
+      <div className='flex-1 mx-auto bg-background '>
+        <div className='bg-background max-w-5xl py-10  mx-auto px-8'>
+          {data?.images && (
+            <ProjectCarousel
+              galleryID='my-test-gallery'
+              images={data?.images}
+              poster={data?.poster}
+            />
+          )}
+          <div className='mt-4 flex flex-col  items-start  rounded animate-fade-up mx-auto bg-background'>
+            <div className='flex '>
+              {data?.github && (
+                <IconButton>
+                  <Link href={data?.github} target='_blank'>
+                    <GitHubIcon
+                      fontSize='large'
+                      className='text-greenText cursor-pointer'
+                    />
+                  </Link>
+                </IconButton>
+              )}
+              {data?.domain ? (
+                <IconButton>
+                  <Link href={data?.domain} target='_blank'>
+                    <LinkIcon
+                      fontSize='large'
+                      className='text-greenText cursor-pointer'
+                    />
+                  </Link>
+                </IconButton>
+              ) : (
+                <IconButton>
+                  <LinkOffIcon
                     fontSize='large'
-                    className='text-greenText cursor-pointer'
+                    className='text-greenText cursor-not-allowed'
                   />
-                </Link>
-              </IconButton>
-            )}
-            {data?.domain ? (
-              <IconButton>
-                <Link href={data?.domain} target='_blank'>
-                  <LinkIcon
-                    fontSize='large'
-                    className='text-greenText cursor-pointer'
-                  />
-                </Link>
-              </IconButton>
-            ) : (
-              <IconButton>
-                <LinkOffIcon
-                  fontSize='large'
-                  className='text-greenText cursor-not-allowed'
-                />
-              </IconButton>
-            )}
-          </div>
-          <h2 className='text-2xl text-headline font-bold'>{data?.name}</h2>
-          <div className='flex py-4 gap-2 flex-wrap'>
-            {data?.tools?.map((tool: string, i: number) => (
-              <FadeIn key={i}>
-                <p
-                  key={i}
-                  className='text-paragraph font-semibold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
-                  {tool}
-                </p>
-              </FadeIn>
-            ))}
-          </div>
+                </IconButton>
+              )}
+            </div>
+            <h2 className='text-2xl text-headline font-bold'>{data?.name}</h2>
+            <div className='flex py-4 gap-2 flex-wrap'>
+              {data?.tools?.map((tool: string, i: number) => (
+                <FadeIn key={i}>
+                  <p
+                    key={i}
+                    className='text-paragraph font-semibold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
+                    {tool}
+                  </p>
+                </FadeIn>
+              ))}
+            </div>
 
-          <div className='text-paragraph'>{parse(String(html))}</div>
+            <div className='text-paragraph'>{parse(String(html))}</div>
+          </div>
         </div>
       </div>
     </>
