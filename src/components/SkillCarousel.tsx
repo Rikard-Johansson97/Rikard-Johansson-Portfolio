@@ -95,21 +95,21 @@ const SkillCarousel: FC<SkillCarouselProps> = ({}) => {
 
   return (
     <div
-      className={`animate-fade-left rounded-xl shadow-inner border-2 border-greenText py-6 mt-8 mb-4 bg-background overflow-hidden drop-shadow-md cursor-grab ${
+      className={` relative animate-fade-left shadow-inner border-greenText py-6 mt-8 mb-4 bg-background drop-shadow-md cursor-grab  ${
         drag && " cursor-grabbing"
       }`}
       onMouseDown={() => setDrag(true)}
       onMouseLeave={() => setDrag(false)}
       onMouseUp={() => setDrag(false)}>
-      <div ref={ref} className='keen-slider'>
-        <div className='absolute flex flex-col gap-2 items-center justify-center z-10 w-full h-full duration-200 opacity-0 hover:opacity-100 transition-opacity hover:animate-fade  hover:animate-once  hover:animate-ease-in-out  hover:animate-reverse hover:animate-duration-[1000ms] hover:animate-delay-[1000ms]'>
+      <div ref={ref} className='keen-slider text-ellipsis'>
+        <div className='overflow-hidden absolute flex flex-col gap-2 items-center justify-center z-10 h-full duration-200 opacity-0 hover:opacity-100 transition-opacity hover:animate-fade  hover:animate-once  hover:animate-ease-in-out  hover:animate-reverse hover:animate-duration-[1000ms] hover:animate-delay-[1000ms]'>
           <p className='text-xl text-headline '>Swipe left or right</p>
           <SwipeTwoToneIcon className='text-white' fontSize='large' />
         </div>
         {skills.map((skill, i) => (
           <div key={i} className='keen-slider__slide flex flex-col justify-end'>
             <img className=' object-contain' src={skill.src} alt={skill.name} />
-            <p className='text-xs font-semibold text-paragraph pt-2'>
+            <p className='text-xs font-semibold text-paragraph pt-2 text-ellipsis'>
               {skill.name}
             </p>
           </div>

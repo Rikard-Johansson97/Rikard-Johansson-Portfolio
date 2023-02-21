@@ -18,6 +18,10 @@
 	scrollbar-color: #ffffff40;
 }
 
+html,body{
+  overflow-x: hidden;
+}
+
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
 	width: 12px;

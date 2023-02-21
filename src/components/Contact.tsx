@@ -37,7 +37,7 @@ const Contact: FC<ContactProps> = ({}) => {
           e-post eller telefon. Jag ser fram emot att höra från dig och
           diskutera hur jag kan hjälpa till.
         </p>
-        <div className='grid grid-flow-col  justify-evenly w-full  p-4 max-w-2xl'>
+        <div className='flex flex-wrap justify-evenly w-full  p-4 max-w-2xl'>
           {contacts.map((item, i) => (
             <div key={i} className='flex flex-col text-center p-2'>
               <div>

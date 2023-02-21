@@ -17,7 +17,7 @@ const Banner: FC<BannerProps> = ({}) => {
           </h3>
           <div className='h-16'>
             <Typed
-              className='text-3xl font-bold text-headline pt-2 pb-4 animate-fade animate-once'
+              className='text-2xl font-bold text-headline pt-2 pb-4 animate-fade animate-once'
               strings={[
                 "Hej, jag är Rikard en Webbutvecklare",
                 "Hej, jag är Rikard en Frontend Utvecklare",

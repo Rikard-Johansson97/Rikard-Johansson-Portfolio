@@ -12,7 +12,7 @@ const Skills: FC<SkillsProps> = ({}) => {
           <h3 className='text-xl font-bold text-headline p-2'>
             Min tekniska kompetens
           </h3>
-          <p className='text-paragraph font-semibold text-sm'>
+          <p className='text-paragraph font-semibold text-sm mx-8 sm:mx-0'>
             Jag är en MERN-stack webbutvecklare med praktisk erfarenhet inom
             flera tekniker, inklusive Next.js, TypeScript och Tailwind. Min
             nyfikenhet och öppenhet för nya tekniker gör mig till en flexibel
