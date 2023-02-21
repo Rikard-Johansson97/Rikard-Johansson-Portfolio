@@ -51,7 +51,7 @@ const Index: NextPage = () => {
     <>
       <Navbar navigation={navigation} />
       <div className='flex-1 mx-auto bg-background '>
-        <div className='bg-background max-w-5xl py-10  mx-auto px-8'>
+        <div className='bg-background max-w-5xl py-16  mx-auto px-8'>
           {data?.images && (
             <ProjectCarousel
               galleryID='my-test-gallery'
