@@ -17,7 +17,7 @@ const Banner: FC<BannerProps> = ({}) => {
               className='text-2xl font-bold text-headline pt-2 pb-4 animate-fade animate-once'
               strings={[
                 "Hej, jag är Rikard en Webbutvecklare",
-                "Hej, jag är Rikard en Fullstack utvecklare",
+                "Hej, jag är Rikard en Fullstack Utvecklare",
               ]}
               backSpeed={30}
               typeSpeed={80}
