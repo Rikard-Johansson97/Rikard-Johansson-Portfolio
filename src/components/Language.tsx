@@ -17,7 +17,7 @@ const Language: FC = () => {
             }}
             className='bg-lightBackground p-4 rounded-md shadow-xl duration-300 hover:brightness-125 cursor-pointer'>
             <Image
-              src={"/United_Kingdom.jpg"}
+              src={"https://i.imgur.com/uPmowmp.jpg"}
               height={96}
               width={156}
               alt={"swedish"}
@@ -30,7 +30,7 @@ const Language: FC = () => {
               setLanguage("se");
             }}>
             <Image
-              src={"/swedish-flag.jpg"}
+              src={"https://i.imgur.com/nzNijYZ.jpg"}
               height={96}
               width={156}
               alt={"swedish"}
