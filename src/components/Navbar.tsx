@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { FC, ReactElement, useState } from "react";
+import { FC, ReactElement, useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -21,7 +21,9 @@ function classNames(...classes: string[]) {
 }
 
 const Navbar: FC<NavbarProps> = ({ navigation }) => {
-  const [currentItem, setCurrentItem] = useState(navigation[0]);
+  const [currentItem, setCurrentItem] = useState<NavigationItem>(
+    {} as NavigationItem
+  );
   const [open, setOpen] = useState(false);
 
   const handleItemClick = (item: NavigationItem) => {
@@ -83,20 +85,23 @@ const Navbar: FC<NavbarProps> = ({ navigation }) => {
                 </div>
                 <div className='hidden sm:ml-6 sm:block '>
                   <div className='flex'>
-                    {navigation.map((item: NavigationItem) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        scroll={false}
-                        className={`px-3 py-2 rounded-md text-sm font-medium ${
-                          item === currentItem
-                            ? "underline underline-offset-2 text-headline"
-                            : "text-paragraph hover:text-headline"
-                        }`}
-                        onClick={() => handleItemClick(item as NavigationItem)}>
-                        {item.name}
-                      </Link>
-                    ))}
+                    {navigation &&
+                      navigation.map((item: NavigationItem) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          scroll={false}
+                          className={`px-3 py-2 rounded-md text-sm font-medium ${
+                            item === currentItem
+                              ? "underline underline-offset-2 text-headline"
+                              : "text-paragraph hover:text-headline"
+                          }`}
+                          onClick={() =>
+                            handleItemClick(item as NavigationItem)
+                          }>
+                          {item.name}
+                        </Link>
+                      ))}
                   </div>
                 </div>
               </div>

@@ -3,7 +3,7 @@
     "collectionId": "31dklwqbl5dw9aq",
     "collectionName": "projects",
     "created": "2023-02-14 15:44:35.209Z",
-    "description": "Jag har skapat en supersnabb och smidig biobiljettbokningsapp med Next.js-ramverket för blixtsnabb laddning och Tailwind-CSS för en snygg och responsiv design. För att lagra och hantera biljettinformation, använder jag den kraftfulla NoSQL-databasen MongoDB. Redux ser till att data smidigt delas mellan komponenter och för betalning har jag valt det användarvänliga Klarna API:et. Slutligen använder jag TypeScript för att undvika buggar och fel i koden.",
+    "description": "I have created a super-fast and smooth cinema ticket booking app using the Next.js framework for lightning-fast loading and Tailwind CSS for a sleek and responsive design. To store and manage ticket information, I use the powerful NoSQL database MongoDB. Redux ensures data is smoothly shared between components, and for payments, I have chosen the user-friendly Klarna API. Finally, I use TypeScript to avoid bugs and errors in the code.",
     "domain": "https://netflix-cinema.vercel.app/",
     "github": "https://github.com/Rikard-Johansson97/netflix-Cinema",
     "id": "wce7rz6znv07vm5",
@@ -41,9 +41,9 @@
     "poster": "https://i.imgur.com/NzDG5aY.jpg",
     "tools": [
       "TypeScript",
-      "Next.JS",
+      "Next.js",
       "Tailwind",
-      "Mongo DB",
+      "MongoDB",
       "Redux",
       "Klarna API",
       "Youtube API"
@@ -55,7 +55,7 @@
     "collectionId": "31dklwqbl5dw9aq",
     "collectionName": "projects",
     "created": "2023-02-14 16:35:42.984Z",
-    "description": "<p>Jag har anv&auml;nt flera tekniska verktyg f&ouml;r att bygga en Spotify-klon som fungerar s&ouml;ml&ouml;st. Genom att anv&auml;nda React Router kunde jag skapa en smidig navigationsupplevelse mellan olika delar av min applikation.<br><br></p>\r\n<p>F&ouml;r att lagra och h&auml;mta data fr&aring;n olika delar av min applikation skapade jag en centraliserad \"store\" med hj&auml;lp av React-redux och redux-toolkit. Genom att anv&auml;nda Spotify-web-api-node kunde jag h&auml;mta data fr&aring;n Spotify API via en Node.js-server.<br><br></p>\r\n<p>F&ouml;r att s&auml;kerst&auml;lla att koden var robust och typs&auml;ker valde jag att anv&auml;nda TypeScript, som &auml;r ett programmeringsspr&aring;k som bygger p&aring; JavaScript. Detta minskade risken f&ouml;r buggar och fel och gjorde koden mer p&aring;litlig. Stylingen av applikationen gjordes i Material UI, ett ramverk f&ouml;r React som erbjuder f&auml;rdiga komponenter och ett enkelt s&auml;tt att skapa en enhetlig design p&aring; ett effektivt s&auml;tt.<br><br><br>OBS! Jag vill po&auml;ngtera att l&auml;nken till min Spotify-klon tyv&auml;rr inte fungerar eftersom Spotify API endast till&aring;ter &aring;tkomst fr&aring;n adminstrat&ouml;rens IP-adress. Tyv&auml;rr kan jag inte tillhandah&aring;lla en fungerande l&auml;nk till applikationen, men jag hoppas att min beskrivning av teknikerna som anv&auml;ndes ger en uppfattning om vad som kr&auml;vs f&ouml;r att bygga en Spotify-klon med moderna tekniska verktyg.</p>",
+    "description": "To create my seamless Spotify clone, I used a variety of technical tools. React Router allowed for smooth navigation between different parts of the application. Using React-redux and redux-toolkit, I created a centralized data store to fetch data from the Spotify API via a Node.js server. TypeScript ensured the code was robust and type-safe, reducing the risk of bugs and errors. Material UI was used for styling, offering pre-made components and an easy way to create a consistent design. Unfortunately, the Spotify API only allows access from the administrator's IP address, so a working link is unavailable. Nevertheless, this should give an idea of the techniques required to build a modern Spotify clone.",
     "domain": "",
     "github": "https://github.com/Rikard-Johansson97/spotify-clone",
     "id": "f3eag4g0m265jfc",
@@ -91,7 +91,7 @@
     ],
     "name": "Spotify Clone",
     "poster": "https://i.imgur.com/sYxN5ok.jpg",
-    "tools": ["React", "TypeScript", "Redux", "Spotify Api", "Material UI"],
+    "tools": ["React", "TypeScript", "Redux", "Spotify API", "Material UI"],
     "updated": "2023-02-19 13:48:23.112Z",
     "expand": {}
   },
@@ -99,7 +99,7 @@
     "collectionId": "31dklwqbl5dw9aq",
     "collectionName": "projects",
     "created": "2023-02-14 18:00:31.142Z",
-    "description": "<div>F&ouml;r att bygga min Airbnb-kopia har jag valt att anv&auml;nda mig av JavaScript och React som huvudsakliga tekniska verktyg. Jag har anv&auml;nt React f&ouml;r att bygga ett interaktivt och anv&auml;ndarv&auml;nligt gr&auml;nssnitt, vilket &auml;r viktigt f&ouml;r att skapa en upplevelse som liknar Airbnb.</div>\r\n<div>&nbsp;</div>\r\n<div>F&ouml;r att styla min applikation har jag anv&auml;nt Sass, vilket har hj&auml;lpt mig att skapa en mer dynamisk och anpassningsbar anv&auml;ndargr&auml;nssnitt.</div>\r\n<div>&nbsp;</div>\r\n<div>F&ouml;r att hantera data och interaktioner med min applikation, har jag valt att anv&auml;nda Mongoose, som &auml;r en ODM (Object Document Mapper) f&ouml;r MongoDB. Mongoose har hj&auml;lpt mig att hantera databasf&ouml;rfr&aring;gningar och samla in data fr&aring;n anv&auml;ndare p&aring; ett effektivt s&auml;tt.</div>\r\n<div>&nbsp;</div>\r\n<div>Jag har ocks&aring; anv&auml;nt Express, som &auml;r en popul&auml;r webbapplikationsramverk f&ouml;r Node.js. Genom att anv&auml;nda Express har jag kunnat skapa en robust och skalbar applikation som kan hantera stora m&auml;ngder data och trafik.</div>\r\n<div>&nbsp;</div>\r\n<div>Genom att kombinera dessa olika tekniska verktyg har jag byggt en anv&auml;ndarv&auml;nlig och anpassningsbar Airbnb-kopia, som kan hantera stora m&auml;ngder data och ge en s&ouml;ml&ouml;s anv&auml;ndarupplevelse f&ouml;r mina anv&auml;ndare.</div>",
+    "description": "I used JavaScript, React, Sass, and Mongoose to create a dynamic and user-friendly Airbnb clone. With the help of Express, my application can handle large amounts of data and traffic. The result is a seamless user experience that can be easily customized to fit the needs of my users.",
     "domain": "https://airbnb-jet-nine.vercel.app/",
     "github": "https://github.com/Rikard-Johansson97/airbnb",
     "id": "leuhc1meoclmuvn",
@@ -143,7 +143,7 @@
     "collectionId": "31dklwqbl5dw9aq",
     "collectionName": "projects",
     "created": "2023-02-14 18:35:45.273Z",
-    "description": "Jag har skapat en HTML-sida som visar en lista med element, där varje element har en unik identifierare skapad med CSS. För att sortera listan har jag använt fyra olika sorteringsalgoritmer: bubbel sort, merge sort, quicksort och selectionsort. Genom att integrera dessa sorteringsalgoritmer i min JavaScript-kod och låta användaren välja vilken algoritm som ska användas kan jag visa hur de påverkar sorteringstiden. Algoritmerna varierar i komplexitet och hastighet - med bubbel sort och selectionsort som enkla men långsamma alternativ, och merge sort och quicksort som snabba alternativ för större listor.",
+    "description": "I have created an HTML page that displays a list of items, where each item has a unique identifier created with CSS. To sort the list, I have used four different sorting algorithms: bubble sort, merge sort, quicksort, and selection sort. By integrating these sorting algorithms into my JavaScript code and allowing the user to choose which algorithm to use, I can show how they affect sorting time. The algorithms vary in complexity and speed, with bubble sort and selection sort being simple but slow options, and merge sort and quicksort being fast options for larger lists.",
     "domain": "https://resonant-sherbet-9c964f.netlify.app/",
     "github": "https://github.com/Rikard-Johansson97/sortVisualizer",
     "id": "rec8welcvcsdp9k",
@@ -191,7 +191,6 @@
         "height": 930,
         "display": "Mobile"
       }
-
     ],
     "name": "Kanban Board",
     "poster": "https://i.imgur.com/PoItgpb.jpg",

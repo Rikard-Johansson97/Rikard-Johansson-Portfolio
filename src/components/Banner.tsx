@@ -4,10 +4,26 @@ import LinkedIn from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
 import React, { FC } from "react";
 import Typed from "react-typed";
+import { useSessionStorage } from "usehooks-ts";
 
-interface BannerProps {}
+const Banner: FC = () => {
+  const [language, setLanguage] = useSessionStorage("lang", "");
+  const typedStrings =
+    language === "en"
+      ? [
+          "Hi, I'm Rikard, a Web Developer",
+          "Hi, I'm Rikard, a Full Stack Developer",
+        ]
+      : [
+          "Hej, jag är Rikard, en Webbutvecklare",
+          "Hej, jag är Rikard, en Fullstack Utvecklare",
+        ];
 
-const Banner: FC<BannerProps> = ({}) => {
+  const introText =
+    language === "en"
+      ? "I'm passionate about creating useful solutions and love to challenge myself with new projects. Seeing my ideas come to life gives me great satisfaction and motivation. I believe in always striving to develop and learn new things to become a better"
+      : "Jag brinner för att skapa användbara lösningar och älskar att utmana mig själv med nya projekt. Att se mina idéer ta form ger mig stor tillfredsställelse och motivation. Jag tror på att alltid sträva efter att utvecklas och lära mig nya saker för att bli en bättre";
+
   return (
     <div className='w-full bg-[url("https://www.transparenttextures.com/patterns/cartographer.png")] bg-black border-b-2 border-lightBackground overflow-hidden pt-12 min-h-[50vh]'>
       <div className='flex flex-col items-center sm:flex-row py-10 px-4 max-w-5xl mx-auto gap-6'>
@@ -15,20 +31,14 @@ const Banner: FC<BannerProps> = ({}) => {
           <div className='h-16'>
             <Typed
               className='text-2xl font-bold text-headline pt-2 pb-4 animate-fade animate-once'
-              strings={[
-                "Hej, jag är Rikard en Webbutvecklare",
-                "Hej, jag är Rikard en Fullstack Utvecklare",
-              ]}
+              strings={typedStrings}
               backSpeed={30}
               typeSpeed={80}
               loop
             />
           </div>
           <p className='text-sm text-paragraph animate-fade-up animate-once'>
-            Jag brinner för att skapa användbara lösningar och älskar att utmana
-            mig själv med nya projekt. Att se mina idéer ta form ger mig stor
-            tillfredsställelse och motivation. Jag tror på att alltid sträva
-            efter att utvecklas och lära mig nya saker för att bli en bättre
+            {introText}
           </p>
         </div>
 

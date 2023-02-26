@@ -102,7 +102,7 @@ const Index: NextPage = () => {
               ))}
             </div>
 
-            <div className='text-paragraph'>{parse(String(html))}</div>
+            <div className='text-paragraph'>{data?.description}</div>
           </div>
         </div>
       </div>

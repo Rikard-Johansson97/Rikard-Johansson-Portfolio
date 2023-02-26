@@ -9,39 +9,96 @@ import ContentPasteOutlinedIcon from "@mui/icons-material/ContentPasteOutlined";
 import ContactPageOutlinedIcon from "@mui/icons-material/ContactPageOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import Navbar from "@/components/Navbar";
+import { useEffect, useState } from "react";
+import Language from "@/components/Language";
+import Footer from "@/components/Footer";
 
-const navigation = [
-  {
-    name: "Hem",
-    href: "/",
-    current: true,
-    icon: <HomeOutlinedIcon fontSize='large' style={{ color: "white" }} />,
-  },
-  {
-    name: "Kompetens",
-    href: "#skills",
-    current: false,
-    icon: <BookIcon fontSize='large' style={{ color: "white" }} />,
-  },
-  {
-    name: "Projekt",
-    href: "#projects",
-    current: false,
-    icon: (
-      <ContentPasteOutlinedIcon fontSize='large' style={{ color: "white" }} />
-    ),
-  },
-  {
-    name: "Kontakta mig",
-    href: "#contact",
-    current: false,
-    icon: (
-      <ContactPageOutlinedIcon fontSize='large' style={{ color: "white" }} />
-    ),
-  },
-];
+import { useSessionStorage } from "usehooks-ts";
+type Navigation = {
+  [keys: string]: {
+    name: string;
+    href: string;
+    current: boolean;
+    icon: any;
+  }[];
+};
+
+const navigation: Navigation = {
+  en: [
+    {
+      name: "Home",
+      href: "/",
+      current: true,
+      icon: <HomeOutlinedIcon fontSize='large' style={{ color: "white" }} />,
+    },
+    {
+      name: "Skills",
+      href: "#skills",
+      current: false,
+      icon: <BookIcon fontSize='large' style={{ color: "white" }} />,
+    },
+    {
+      name: "Projects",
+      href: "#projects",
+      current: false,
+      icon: (
+        <ContentPasteOutlinedIcon fontSize='large' style={{ color: "white" }} />
+      ),
+    },
+    {
+      name: "Contact",
+      href: "#contact",
+      current: false,
+      icon: (
+        <ContactPageOutlinedIcon fontSize='large' style={{ color: "white" }} />
+      ),
+    },
+  ],
+  se: [
+    {
+      name: "Hem",
+      href: "/",
+      current: true,
+      icon: <HomeOutlinedIcon fontSize='large' style={{ color: "white" }} />,
+    },
+    {
+      name: "Kompetens",
+      href: "#skills",
+      current: false,
+      icon: <BookIcon fontSize='large' style={{ color: "white" }} />,
+    },
+    {
+      name: "Projekt",
+      href: "#projects",
+      current: false,
+      icon: (
+        <ContentPasteOutlinedIcon fontSize='large' style={{ color: "white" }} />
+      ),
+    },
+    {
+      name: "Kontakta mig",
+      href: "#contact",
+      current: false,
+      icon: (
+        <ContactPageOutlinedIcon fontSize='large' style={{ color: "white" }} />
+      ),
+    },
+  ],
+};
 
 export default function Home() {
+  const [language, setLanguage] = useSessionStorage("lang", "");
+  const [currentNavigation, setCurrentNavigation] = useState<any>({});
+  const [domLoaded, setDomLoaded] = useState(false);
+
+  useEffect(() => {
+    setCurrentNavigation(navigation[language]);
+  }, [language]);
+
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
+
   return (
     <>
       <Head>
@@ -73,15 +130,23 @@ export default function Home() {
         <meta name='msapplication-TileColor' content='#da532c' />
         <meta name='theme-color' content='#ffffff' />
       </Head>
-      <main>
-        <Navbar navigation={navigation} />
-        <Banner />
-        <Skills />
-        <Timeline />
-        <Projects />
-
-        <Contact />
-      </main>
+      {domLoaded && (
+        <main>
+          {!language ? (
+            <Language />
+          ) : currentNavigation ? ( // Check if currentNavigation is not null or undefined
+            <>
+              <Navbar navigation={currentNavigation} />
+              <Banner />
+              <Skills />
+              <Timeline />
+              <Projects />
+              <Contact />
+              <Footer />
+            </>
+          ) : null}
+        </main>
+      )}
     </>
   );
 }
