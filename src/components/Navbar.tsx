@@ -52,9 +52,8 @@ const Navbar: FC<NavbarProps> = ({ navigation }) => {
       }`}>
       {({ open }) => (
         <div
-          className={`z-50 relative duration-300 ${
-            (open || isScrolled) &&
-            "sm:bg-transparent bg-lightBackground shadow-md"
+          className={`z-50 relative duration-300  ${
+            (open || isScrolled) && " bg-lightBackground shadow-md"
           }`}>
           <div className='mx-auto max-w-5xl px-4'>
             <div className='relative flex h-16 items-center justify-between '>
