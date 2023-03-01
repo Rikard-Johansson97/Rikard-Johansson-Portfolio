@@ -4,6 +4,7 @@ import CodeIcon from "@mui/icons-material/Code";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import { useSessionStorage } from "usehooks-ts";
+import FadeIn from "./FadeIn";
 
 type ServiceType = {
   title: string;
@@ -61,15 +62,15 @@ const Services: FC = ({}) => {
     <>
       <div className='flex flex-wrap max-w-5xl mx-auto items gap-4 p-4'>
         {services[language as keyof typeof services]?.map((service, i) => (
-          <div
-            key={i}
-            className='flex flex-col justify-center text-headline max-w-xs mx-auto sm:flex-1 px-4 py-10 bg-lightBackground'>
-            <div className='text-center flex-1'>
-              {service.icon}
-              <h3 className='text-xl font-bold mt-4 mb-2'>{service.title}</h3>
-              <p className='text-paragraph'>{service.desc}</p>
+          <FadeIn key={i}>
+            <div className='flex flex-col justify-center text-headline sm:max-w-xs mx-auto sm:flex-1 px-4 py-10 bg-lightBackground rounded-md shadow'>
+              <div className='text-center flex-1'>
+                {service.icon}
+                <h3 className='text-xl font-bold mt-4 mb-2'>{service.title}</h3>
+                <p className='text-paragraph'>{service.desc}</p>
+              </div>
             </div>
-          </div>
+          </FadeIn>
         ))}
       </div>
     </>
