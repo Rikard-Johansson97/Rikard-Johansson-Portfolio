@@ -2,7 +2,7 @@
 import GitHub from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import Typed from "react-typed";
 import { useSessionStorage } from "usehooks-ts";
 

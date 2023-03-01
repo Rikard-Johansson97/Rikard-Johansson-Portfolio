@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import Image from "next/image";
 import { useSessionStorage } from "usehooks-ts";
 
@@ -17,6 +17,10 @@ const Language: FC = () => {
       setSelectedImage("https://i.imgur.com/uPmowmp.jpg");
     }
   };
+
+  useEffect(() => {
+    toggleLanguage();
+  }, []);
 
   return (
     <div className='absolute top-5 sm:top-auto right-2'>

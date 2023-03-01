@@ -56,24 +56,23 @@ const services: ServicesType = {
 
 const Services: FC = ({}) => {
   const [language, setLanguage] = useSessionStorage("lang", "en");
-  console.log(services[language as keyof typeof services]);
 
   return (
-    <>
-      <div className='flex flex-wrap max-w-5xl mx-auto items gap-4 p-4'>
+    <FadeIn>
+      <div className='grid grid-cols-auto-fit-300 p-4 gap-4 w-full max-w-5xl mx-auto'>
         {services[language as keyof typeof services]?.map((service, i) => (
-          <FadeIn key={i}>
-            <div className='flex flex-col justify-center text-headline sm:max-w-xs mx-auto sm:flex-1 px-4 py-10 bg-lightBackground rounded-md shadow'>
-              <div className='text-center flex-1'>
-                {service.icon}
-                <h3 className='text-xl font-bold mt-4 mb-2'>{service.title}</h3>
-                <p className='text-paragraph'>{service.desc}</p>
-              </div>
+          <div
+            key={i}
+            className='flex flex-col justify-center text-headline sm:max-w-xs mx-auto flex-wrap px-4 py-10 bg-lightBackground rounded-md shadow'>
+            <div className='text-center flex-1'>
+              {service.icon}
+              <h3 className='text-xl font-bold mt-4 mb-2'>{service.title}</h3>
+              <p className='text-paragraph'>{service.desc}</p>
             </div>
-          </FadeIn>
+          </div>
         ))}
       </div>
-    </>
+    </FadeIn>
   );
 };
 
