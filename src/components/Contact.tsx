@@ -27,7 +27,7 @@ const contacts = [
 ];
 
 const Contact: FC<ContactProps> = ({}) => {
-  const [language, setLanguage] = useSessionStorage("lang", "");
+  const [language, setLanguage] = useSessionStorage("lang", "en");
   return (
     <FadeIn>
       <div

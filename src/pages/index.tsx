@@ -14,6 +14,7 @@ import Language from "@/components/Language";
 import Footer from "@/components/Footer";
 
 import { useSessionStorage } from "usehooks-ts";
+import Services from "@/components/Services";
 type Navigation = {
   [keys: string]: {
     name: string;
@@ -87,7 +88,7 @@ const navigation: Navigation = {
 };
 
 export default function Home() {
-  const [language, setLanguage] = useSessionStorage("lang", "");
+  const [language, setLanguage] = useSessionStorage("lang", "en");
   const [currentNavigation, setCurrentNavigation] = useState<any>({});
   const [domLoaded, setDomLoaded] = useState(false);
 
@@ -132,19 +133,17 @@ export default function Home() {
       </Head>
       {domLoaded && (
         <main>
-          {!language ? (
-            <Language />
-          ) : currentNavigation ? ( // Check if currentNavigation is not null or undefined
-            <>
-              <Navbar navigation={currentNavigation} />
-              <Banner />
-              <Skills />
-              <Timeline />
-              <Projects />
-              <Contact />
-              <Footer />
-            </>
-          ) : null}
+          <>
+            <Navbar navigation={currentNavigation} />
+
+            <Banner />
+            <Skills />
+            <Services />
+            <Timeline />
+            <Projects />
+            <Contact />
+            <Footer />
+          </>
         </main>
       )}
     </>

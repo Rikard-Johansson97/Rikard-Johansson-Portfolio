@@ -9,7 +9,7 @@ import { useSessionStorage } from "usehooks-ts";
 interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = ({}) => {
-  const [language, setLanguage] = useSessionStorage("lang", "");
+  const [language, setLanguage] = useSessionStorage("lang", "en");
   const [data, loading, error] = useGetProjects() as Project[];
 
   if (loading) return <h1>Loading</h1>;

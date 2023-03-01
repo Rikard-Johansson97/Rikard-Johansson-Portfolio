@@ -6,7 +6,7 @@ import { useSessionStorage } from "usehooks-ts";
 interface SkillsProps {}
 
 const Skills: FC<SkillsProps> = ({}) => {
-  const [language, setLanguage] = useSessionStorage("lang", "");
+  const [language, setLanguage] = useSessionStorage("lang", "en");
   return (
     <div
       id='skills'

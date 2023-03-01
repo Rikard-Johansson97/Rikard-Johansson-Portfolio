@@ -65,7 +65,7 @@ const timelineItems: TimelineItems = {
 interface TimelineProps {}
 
 const Timeline: FC<TimelineProps> = ({}) => {
-  const [language, setLanguage] = useSessionStorage("lang", "");
+  const [language, setLanguage] = useSessionStorage("lang", "en");
   return (
     <div className='pl-4 pt-10 max-w-5xl mx-auto bg-background'>
       <h3 className='text-xl text-center font-bold text-headline py-2'>

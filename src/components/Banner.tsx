@@ -7,7 +7,7 @@ import Typed from "react-typed";
 import { useSessionStorage } from "usehooks-ts";
 
 const Banner: FC = () => {
-  const [language, setLanguage] = useSessionStorage("lang", "");
+  const [language, setLanguage] = useSessionStorage("lang", "en");
   const typedStrings =
     language === "en"
       ? [

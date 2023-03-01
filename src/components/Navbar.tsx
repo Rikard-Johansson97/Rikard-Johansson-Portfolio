@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 import { IconButton } from "@mui/material";
+import Language from "./Language";
 interface NavigationItem {
   name: string;
   href: string;
@@ -25,24 +26,39 @@ const Navbar: FC<NavbarProps> = ({ navigation }) => {
     {} as NavigationItem
   );
   const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleItemClick = (item: NavigationItem) => {
     setCurrentItem({ ...currentItem, current: false });
     setCurrentItem(item);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Disclosure
       as='nav'
-      className={`absolute w-full animate-fade-down animate-once z-50`}>
+      className={`fixed duration-300 w-full h-1 animate-fade-down animate-once z-50 ${
+        isScrolled ? "bg-lightBackground shadow-md" : ""
+      }`}>
       {({ open }) => (
         <div
-          className={`z-50 relative ${
-            open && "sm:bg-transparent bg-background"
+          className={`z-50 relative duration-300 ${
+            (open || isScrolled) &&
+            "sm:bg-transparent bg-lightBackground shadow-md"
           }`}>
           <div className='mx-auto max-w-5xl px-4'>
-            <div className='relative flex h-16 items-center justify-between'>
-              <div className='flex w-full justify-end sm:hidden'>
+            <div className='relative flex h-16 items-center justify-between '>
+              <div className='flex w-full justify-end sm:hidden '>
                 <div className='absolute inset-y-0 left-0 flex items-center  '>
                   <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-paragraph hover:bg-background hover:text-headline focus:outline-none focus:ring-2 focus:ring-inset focus:ring-headline '>
                     <span className='sr-only'>
@@ -55,13 +71,9 @@ const Navbar: FC<NavbarProps> = ({ navigation }) => {
                     )}
                   </Disclosure.Button>
                 </div>
-                <Link href={"/"}>
-                  <img
-                    className='h-8 w-auto rounded-shape shadow-sm flex-end'
-                    src='https://i.postimg.cc/J4brMKmD/Avatar-Maker.png'
-                    alt='Your Company'
-                  />
-                </Link>
+                <div className='block  sm:hidden'>
+                  <Language />
+                </div>
               </div>
               <div className='absolute inset-y-0 left-0 flex items-center sm:hidden '>
                 <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-paragraph hover:bg-background hover:text-headline focus:outline-none focus:ring-2 focus:ring-inset focus:ring-headline '>
@@ -84,24 +96,27 @@ const Navbar: FC<NavbarProps> = ({ navigation }) => {
                   />
                 </div>
                 <div className='hidden sm:ml-6 sm:block '>
-                  <div className='flex'>
-                    {navigation &&
-                      navigation.map((item: NavigationItem) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          scroll={false}
-                          className={`px-3 py-2 rounded-md text-sm font-medium ${
-                            item === currentItem
-                              ? "underline underline-offset-2 text-headline"
-                              : "text-paragraph hover:text-headline"
-                          }`}
-                          onClick={() =>
-                            handleItemClick(item as NavigationItem)
-                          }>
-                          {item.name}
-                        </Link>
-                      ))}
+                  <div className='flex flex-1 w-full justify-between'>
+                    <div>
+                      {navigation &&
+                        navigation.map((item: NavigationItem) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            scroll={false}
+                            className={`px-3 py-2 rounded-md text-sm font-medium ${
+                              item === currentItem
+                                ? "underline underline-offset-2 text-headline"
+                                : "text-paragraph hover:text-headline"
+                            }`}
+                            onClick={() =>
+                              handleItemClick(item as NavigationItem)
+                            }>
+                            {item.name}
+                          </Link>
+                        ))}
+                    </div>
+                    <Language />
                   </div>
                 </div>
               </div>
