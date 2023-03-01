@@ -12,12 +12,17 @@ import FadeIn from "@/components/FadeIn";
 import LinkOffIcon from "@mui/icons-material/LinkOff";
 import Navbar from "@/components/Navbar";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import { useSessionStorage } from "usehooks-ts";
+import { useEffect } from "react";
 
 const Index: NextPage = () => {
+  const [language, setLanguage] = useSessionStorage("lang", "en");
   const router = useRouter();
   const { projectid } = router.query;
-
-  const [data, loading, error] = useGetProject(projectid as string) as Project;
+  const [data, loading, error] = useGetProject(
+    projectid as string,
+    language as string
+  ) as Project;
 
   if (loading) return <h1>Loading...</h1>;
 

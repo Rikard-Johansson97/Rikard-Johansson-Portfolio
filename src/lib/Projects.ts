@@ -3,7 +3,7 @@ import { Project } from '@/types/types';
 import { useSessionStorage } from 'usehooks-ts';
 
 export default function useGetProjects() {
-  const [language, setLanguage] = useSessionStorage("lang", "");
+  const [language, setLanguage] = useSessionStorage("lang", "en");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
   const [data, setData] = useState<Project[]>();
