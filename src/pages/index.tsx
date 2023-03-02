@@ -138,7 +138,7 @@ export default function Home() {
 
             <Banner />
             <Skills />
-            <Services />
+            {/* <Services /> */}
             <Timeline />
             <Projects />
             <Contact />
