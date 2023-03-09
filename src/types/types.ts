@@ -1,8 +1,4 @@
-export type Project = [
-  ProjectData,
-  boolean,
-  any
-]
+export type Project = [ProjectData, boolean, any];
 
 export interface ProjectData {
   collectionId: string;
@@ -15,16 +11,16 @@ export interface ProjectData {
     thumbnailURL: string;
     width: number;
     height: number;
-    display: string;
+    display: "Mobile" | "Tablet" | "Desktop";
   }[];
   name: string;
   tools: string[];
   updated: string;
   expand: {};
-  domain:string,
+  domain: string;
   github: string;
   poster: string;
-};
+}
 
 export interface Error {
   url: string;

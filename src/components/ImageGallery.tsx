@@ -4,6 +4,7 @@ import React, { FC, useEffect, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import PhoneIphoneOutlinedIcon from "@mui/icons-material/PhoneIphoneOutlined";
 import DesktopWindowsOutlinedIcon from "@mui/icons-material/DesktopWindowsOutlined";
+import TabletIcon from "@mui/icons-material/Tablet";
 interface ProjectCarouselProps {
   galleryID: string;
   images: {
@@ -88,6 +89,9 @@ const ImageGallery: FC<ProjectCarouselProps> = ({
               )}
               {image.display === "Desktop" && (
                 <DesktopWindowsOutlinedIcon style={{ color: "white" }} />
+              )}
+              {image.display === "Tablet" && (
+                <TabletIcon style={{ color: "white" }} />
               )}
             </div>
           </div>

@@ -1,5 +1,42 @@
 [
   {
+    "collectionId": "31dklwqbl5dw321",
+    "collectionName": "projects",
+    "created": "2023-02-18 17:25:25.836Z",
+    "description": "This project is a modern web application built with Next.js, TypeScript, Firebase, Chakra UI, and Redux. It offers users a fast and responsive experience, while leveraging real-time data storage and user authentication. With a focus on predictable state management and sleek design, users can post content, interact with others, and more. The unique combination of these technologies creates an efficient and powerful web application that prioritizes modern web development practices.",
+    "domain": "https://reddit-clone-next-firebase-chakra-git-main-rikard-johansson97.vercel.app/",
+    "github": "https://github.com/Rikard-Johansson97/Reddit-clone-Next-Firebase-Chakra",
+    "id": "q35la6guqbv0asd",
+    "images": [
+      {
+        "largeURL": "https://i.imgur.com/LMG9uBL.png",
+        "thumbnailURL": "https://i.imgur.com/LMG9uBL.png",
+        "width": 1920,
+        "height": 930,
+        "display": "Desktop"
+      },
+      {
+        "largeURL": "https://i.imgur.com/0noGysS.png",
+        "thumbnailURL": "https://i.imgur.com/0noGysS.png",
+        "width": 960,
+        "height": 930,
+        "display": "Tablet"
+      },
+      {
+        "largeURL": "https://i.imgur.com/VbRfBRy.png",
+        "thumbnailURL": "https://i.imgur.com/VbRfBRy.png",
+        "width": 490,
+        "height": 930,
+        "display": "Mobile"
+      }
+    ],
+    "name": "Reddit Clone",
+    "poster": "https://i.imgur.com/9iyuaOg.jpg",
+    "tools": ["Next.js", "TypeScript", "Firebase", "Chakra UI", "Redux"],
+    "updated": "2023-02-18 17:31:07.253Z",
+    "expand": {}
+  },
+  {
     "collectionId": "31dklwqbl5dw9aq",
     "collectionName": "projects",
     "created": "2023-02-14 15:44:35.209Z",
