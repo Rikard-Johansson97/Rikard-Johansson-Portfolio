@@ -7,8 +7,8 @@ export interface ProjectData {
 }
 
 export async function getProjects(): Promise<ProjectData> {
-  const resSE = await fetch(`http://localhost:3000/datase.json`);
-  const resEN = await fetch(`http://localhost:3000/dataen.json`);
+  const resSE = await fetch(`${process.env.NEXT_PUBLIC_URL}datase.json`);
+  const resEN = await fetch(`${process.env.NEXT_PUBLIC_URL}dataen.json`);
 
   if (!resSE.ok) {
     throw new Error(
