@@ -1,6 +1,4 @@
-export type Project = [ProjectData, boolean, any];
-
-export interface ProjectData {
+export interface Project {
   collectionId: string;
   collectionName: string;
   created: string;
@@ -20,13 +18,4 @@ export interface ProjectData {
   domain: string;
   github: string;
   poster: string;
-}
-
-export interface Error {
-  url: string;
-  status: number;
-  data: {};
-  isAbort: boolean;
-  originalError: {};
-  name: string;
 }

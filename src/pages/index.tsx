@@ -15,6 +15,10 @@ import Footer from "@/components/Footer";
 
 import { useSessionStorage } from "usehooks-ts";
 import Services from "@/components/Services";
+import { Project } from "@/types/types";
+import { getProjects, ProjectData } from "@/lib/getProjects";
+import { GetServerSidePropsContext } from "next";
+
 type Navigation = {
   [keys: string]: {
     name: string;
@@ -87,17 +91,25 @@ const navigation: Navigation = {
   ],
 };
 
-export default function Home() {
+interface Props {
+  projects: ProjectData;
+}
+
+export default function Home({ projects }: Props) {
+  const [currentNavigation, setCurrentNavigation] = useState<any>([]);
   const [language, setLanguage] = useSessionStorage("lang", "en");
-  const [currentNavigation, setCurrentNavigation] = useState<any>({});
-  const [domLoaded, setDomLoaded] = useState(false);
+  const [projectsData, setProjectsData] = useState<Project[]>([]);
+  const [loaded, setLoaded] = useState<boolean>(false);
 
   useEffect(() => {
     setCurrentNavigation(navigation[language]);
+    setProjectsData(
+      language === "en" ? projects.projectsEN : projects.projectsSE
+    );
   }, [language]);
 
   useEffect(() => {
-    setDomLoaded(true);
+    setLoaded(true);
   }, []);
 
   return (
@@ -131,16 +143,15 @@ export default function Home() {
         <meta name='msapplication-TileColor' content='#da532c' />
         <meta name='theme-color' content='#ffffff' />
       </Head>
-      {domLoaded && (
+      {loaded && (
         <main>
           <>
             <Navbar navigation={currentNavigation} />
-
             <Banner />
             <Skills />
             {/* <Services /> */}
             <Timeline />
-            <Projects />
+            <Projects projects={projectsData} />
             <Contact />
             <Footer />
           </>
@@ -148,4 +159,12 @@ export default function Home() {
       )}
     </>
   );
+}
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const projects = await getProjects();
+
+  return {
+    props: { projects }, // will be passed to the page component as props
+  };
 }

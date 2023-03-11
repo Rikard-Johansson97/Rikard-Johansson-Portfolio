@@ -97,23 +97,22 @@ const Navbar: FC<NavbarProps> = ({ navigation }) => {
                 <div className='hidden sm:ml-6 sm:block '>
                   <div className='flex flex-1 w-full justify-between'>
                     <div>
-                      {navigation &&
-                        navigation.map((item: NavigationItem) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            scroll={false}
-                            className={`px-3 py-2 rounded-md text-sm font-medium ${
-                              item === currentItem
-                                ? "underline underline-offset-2 text-headline"
-                                : "text-paragraph hover:text-headline"
-                            }`}
-                            onClick={() =>
-                              handleItemClick(item as NavigationItem)
-                            }>
-                            {item.name}
-                          </Link>
-                        ))}
+                      {navigation?.map((item: NavigationItem) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          scroll={false}
+                          className={`px-3 py-2 rounded-md text-sm font-medium ${
+                            item === currentItem
+                              ? "underline underline-offset-2 text-headline"
+                              : "text-paragraph hover:text-headline"
+                          }`}
+                          onClick={() =>
+                            handleItemClick(item as NavigationItem)
+                          }>
+                          {item.name}
+                        </Link>
+                      ))}
                     </div>
                     <Language />
                   </div>
@@ -124,7 +123,7 @@ const Navbar: FC<NavbarProps> = ({ navigation }) => {
 
           <Disclosure.Panel className='sm:hidden '>
             <div className='space-y-1 px-2 pt-2 pb-3 bg-background  border-b-2 border-greenText '>
-              {navigation.map((item: NavigationItem) => (
+              {navigation?.map((item: NavigationItem) => (
                 <Link
                   scroll={false}
                   href={item.href}

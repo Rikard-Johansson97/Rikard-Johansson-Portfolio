@@ -1,19 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { FC } from "react";
+import { getProjects } from "@/lib/getProjects";
+import { Project } from "@/types/types";
 import Link from "next/link";
-import { Project, ProjectData } from "@/types/types";
-import useGetProjects from "@/lib/Projects";
-import FadeIn from "./FadeIn";
+import { FC } from "react";
 import { useSessionStorage } from "usehooks-ts";
+import FadeIn from "./FadeIn";
 
-interface ProjectsProps {}
+interface ProjectsProps {
+  projects: Project[];
+}
 
-const Projects: FC<ProjectsProps> = ({}) => {
+const Projects: FC<ProjectsProps> = ({ projects }) => {
   const [language, setLanguage] = useSessionStorage("lang", "en");
-  const [data, loading, error] = useGetProjects() as Project[];
-
-  if (loading) return <h1>Loading</h1>;
-
   return (
     <div
       id='projects'
@@ -27,7 +25,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
           : "Check out some of my projects!"}
       </p>
       <div className='grid grid-cols-auto-fit-200 p-4 gap-4 w-full max-w-5xl '>
-        {data?.map((project: ProjectData, i: number) => (
+        {projects?.map((project: Project, i: number) => (
           <FadeIn key={i}>
             <Link href={`/project/${project?.id}`}>
               <div className=' rounded-xl bg-lightBackground p-3 duration-200 hover:brightness-125'>
@@ -42,7 +40,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                   {project?.name}
                 </h3>
                 <div className='flex gap-2 flex-wrap'>
-                  {project?.tools.slice(0, 2).map((item, i) => (
+                  {project?.tools.slice(0, 2).map((item: any, i: number) => (
                     <p
                       key={i}
                       className='text-paragraph font-semibold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
