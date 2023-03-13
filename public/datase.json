@@ -1,39 +1,77 @@
-[{
-  "collectionId": "31dklwqbl5dw321",
-  "collectionName": "projekt",
-  "created": "2023-02-18 17:25:25.836Z",
-  "description": "Det här projektet är en modern webbapplikation byggd med Next.js, TypeScript, Firebase, Chakra UI och Redux. Det erbjuder användare en snabb och responsiv upplevelse, samtidigt som det använder realtidsdatalagring och användarautentisering. Med fokus på förutsägbar state management och snygg design kan användare posta innehåll, interagera med andra och mer. Den unika kombinationen av dessa tekniker skapar en effektiv och kraftfull webbapplikation som prioriterar moderna webbutvecklingspraktiker.",
-  "domain": "https://reddit-clone-next-firebase-chakra-git-main-rikard-johansson97.vercel.app/",
-  "github": "https://github.com/Rikard-Johansson97/Reddit-clone-Next-Firebase-Chakra",
-  "id": "q35la6guqbv0asd",
-  "images": [
+[
   {
-  "largeURL": "https://i.imgur.com/LMG9uBL.png",
-  "thumbnailURL": "https://i.imgur.com/LMG9uBL.png",
-  "width": 1920,
-  "height": 930,
-  "display": "Desktop"
+    "collectionId": "q35la6guqbbdfg2",
+    "collectionName": "projekt",
+    "created": "2023-02-18 17:25:25.836Z",
+    "description": "Jag har skapat en e-handelssida med hjälp av flera olika verktyg och system för att skapa en sömlös användarupplevelse. CMS (Content Management System) har använts för att hantera innehållet på webbplatsen, vilket inkluderar alla produkter, priser, bilder och beskrivningar. Med hjälp av Redux Toolkit har jag implementerat funktionalitet som gör att besökare kan lägga produkter i sin kundvagn och genomföra köp på ett smidigt sätt. Dessutom har jag använt NextAuth.js för att hantera autentisering och inloggning, och Sanity v3 för att hantera innehållet på webbplatsen. Allt detta har byggts på Next.js, en ramverk för att bygga React-baserade webbapplikationer, och TypeScript som lägger till typning och struktur till JavaScript-koden.",
+    "domain": "",
+    "github": "https://github.com/Rikard-Johansson97/apple-e-commerce-cms",
+    "id": "q35la6guqbbdfg2",
+    "images": [
+      {
+        "largeURL": "https://i.imgur.com/ZOzyDnT.png",
+        "thumbnailURL": "https://i.imgur.com/ZOzyDnT.png",
+        "width": 1920,
+        "height": 930,
+        "display": "Desktop"
+      },
+      {
+        "largeURL": "https://i.imgur.com/uhYH5O3.png",
+        "thumbnailURL": "https://i.imgur.com/uhYH5O3.png",
+        "width": 960,
+        "height": 930,
+        "display": "Tablet"
+      },
+      {
+        "largeURL": "https://i.imgur.com/J4WQqt0.png",
+        "thumbnailURL": "https://i.imgur.com/J4WQqt0.png",
+        "width": 490,
+        "height": 930,
+        "display": "Mobile"
+      }
+    ],
+    "name": "Apple Store",
+    "poster": "https://i.imgur.com/5Dhv0WS.jpg",
+    "tools": ["Next.js", "TypeScript", "NextAuth.js", "Sanity v3", "Redux Toolkit", "CMS"],
+    "updated": "2023-02-18 17:31:07.253Z",
+    "expand": {}
   },
   {
-  "largeURL": "https://i.imgur.com/0noGysS.png",
-  "thumbnailURL": "https://i.imgur.com/0noGysS.png",
-  "width": 960,
-  "height": 930,
-  "display": "Tablet"
-  },
-  {
-  "largeURL": "https://i.imgur.com/VbRfBRy.png",
-  "thumbnailURL": "https://i.imgur.com/VbRfBRy.png",
-  "width": 490,
-  "height": 930,
-  "display": "Mobile"
-  }
-  ],
-  "name": "Reddit Clone",
-  "poster": "https://i.imgur.com/9iyuaOg.jpg",
-  "tools": ["Next.js", "TypeScript", "Firebase", "Chakra UI", "Redux"],
-  "updated": "2023-02-18 17:31:07.253Z",
-  "expand": {}
+    "collectionId": "31dklwqbl5dw321",
+    "collectionName": "projekt",
+    "created": "2023-02-18 17:25:25.836Z",
+    "description": "Det här projektet är en modern webbapplikation byggd med Next.js, TypeScript, Firebase, Chakra UI och Redux. Det erbjuder användare en snabb och responsiv upplevelse, samtidigt som det använder realtidsdatalagring och användarautentisering. Med fokus på förutsägbar state management och snygg design kan användare posta innehåll, interagera med andra och mer. Den unika kombinationen av dessa tekniker skapar en effektiv och kraftfull webbapplikation som prioriterar moderna webbutvecklingspraktiker.",
+    "domain": "https://reddit-clone-next-firebase-chakra-git-main-rikard-johansson97.vercel.app/",
+    "github": "https://github.com/Rikard-Johansson97/Reddit-clone-Next-Firebase-Chakra",
+    "id": "q35la6guqbv0asd",
+    "images": [
+      {
+        "largeURL": "https://i.imgur.com/LMG9uBL.png",
+        "thumbnailURL": "https://i.imgur.com/LMG9uBL.png",
+        "width": 1920,
+        "height": 930,
+        "display": "Desktop"
+      },
+      {
+        "largeURL": "https://i.imgur.com/0noGysS.png",
+        "thumbnailURL": "https://i.imgur.com/0noGysS.png",
+        "width": 960,
+        "height": 930,
+        "display": "Tablet"
+      },
+      {
+        "largeURL": "https://i.imgur.com/VbRfBRy.png",
+        "thumbnailURL": "https://i.imgur.com/VbRfBRy.png",
+        "width": 490,
+        "height": 930,
+        "display": "Mobile"
+      }
+    ],
+    "name": "Reddit Clone",
+    "poster": "https://i.imgur.com/9iyuaOg.jpg",
+    "tools": ["Next.js", "TypeScript", "Firebase", "Chakra UI", "Redux"],
+    "updated": "2023-02-18 17:31:07.253Z",
+    "expand": {}
   },
   {
     "collectionId": "31dklwqbl5dw9aq",
@@ -227,7 +265,6 @@
         "height": 930,
         "display": "Mobile"
       }
-
     ],
     "name": "Kanban Board",
     "poster": "https://i.imgur.com/PoItgpb.jpg",
