@@ -3,6 +3,50 @@
     "collectionId": "q35la6guqbbdfg2",
     "collectionName": "projekt",
     "created": "2023-02-18 17:25:25.836Z",
+    "description": "Detta projekt är en ChatGPT-klon med Google-användarautentisering och OpenAI API-integration. Applikationen erbjuder en responsiv design, realtidskonversationer, anpassningsbarhet och fokus på säkerhet och integritet. Detta säkerställer en smidig och engagerande användarupplevelse för behöriga användare att interagera med AI-modellen.",
+    "domain": "https://openai-chat-sigma.vercel.app/",
+    "github": "https://github.com/Rikard-Johansson97/openai-chat",
+    "id": "q35la6guqbbdfg2",
+    "images": [
+      {
+        "largeURL": "https://i.imgur.com/pgKzB1i.png",
+        "thumbnailURL": "https://i.imgur.com/pgKzB1i.png",
+        "width": 1920,
+        "height": 930,
+        "display": "Desktop"
+      },
+      {
+        "largeURL": "https://i.imgur.com/nMaQ15H.png",
+        "thumbnailURL": "https://i.imgur.com/nMaQ15H.png",
+        "width": 960,
+        "height": 930,
+        "display": "Tablet"
+      },
+      {
+        "largeURL": "https://i.imgur.com/aJZ1NcF.pngg",
+        "thumbnailURL": "https://i.imgur.com/aJZ1NcF.png",
+        "width": 490,
+        "height": 930,
+        "display": "Mobile"
+      }
+    ],
+    "name": "ChatGPT",
+    "poster": "https://i.imgur.com/p1ah8io.jpg",
+    "tools": [
+      "Next.js",
+      "TypeScript",
+      "NextAuth.js",
+      "Firebase v9",
+      "OpenAI API",
+      "React Toaster"
+    ],
+    "updated": "2023-02-18 17:31:07.253Z",
+    "expand": {}
+  },
+  {
+    "collectionId": "q35la6guqbbdfg2",
+    "collectionName": "projekt",
+    "created": "2023-02-18 17:25:25.836Z",
     "description": "Jag har skapat en e-handelssida med hjälp av flera olika verktyg och system för att skapa en sömlös användarupplevelse. CMS (Content Management System) har använts för att hantera innehållet på webbplatsen, vilket inkluderar alla produkter, priser, bilder och beskrivningar. Med hjälp av Redux Toolkit har jag implementerat funktionalitet som gör att besökare kan lägga produkter i sin kundvagn och genomföra köp på ett smidigt sätt. Dessutom har jag använt NextAuth.js för att hantera autentisering och inloggning, och Sanity v3 för att hantera innehållet på webbplatsen. Allt detta har byggts på Next.js, en ramverk för att bygga React-baserade webbapplikationer, och TypeScript som lägger till typning och struktur till JavaScript-koden.",
     "domain": "",
     "github": "https://github.com/Rikard-Johansson97/apple-e-commerce-cms",
