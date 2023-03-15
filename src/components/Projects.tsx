@@ -36,7 +36,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
                     alt={project?.name}
                   />
                 </div>
-                <div className='flex flex-col justify-b'>
+                <div className='flex flex-1 flex-col justify-between'>
                   <div>
                     <h3 className='text-headline text-xl font-semibold py-2'>
                       {project?.name}
@@ -47,7 +47,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
                         : "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Optio, reiciendis."}
                     </p>
                   </div>
-                  <div className='flex gap-2 flex-wrap flex-end'>
+                  <div className='flex gap-2 flex-end'>
                     {project?.tools.slice(0, 2).map((item: any, i: number) => (
                       <p
                         key={i}
