@@ -7,7 +7,7 @@ import { useSessionStorage } from "usehooks-ts";
 import FadeIn from "./FadeIn";
 
 interface ProjectsProps {
-  projects: Project[];
+  projects: Project[] | undefined;
 }
 
 const Projects: FC<ProjectsProps> = ({ projects }) => {
@@ -24,11 +24,11 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
           ? "Ta en titt på några av de projekt jag har gjort!"
           : "Check out some of my projects!"}
       </p>
-      <div className='grid grid-cols-auto-fit-200 p-4 gap-4 w-full max-w-5xl '>
+      <div className='grid grid-cols-auto-fill-300 p-4 gap-4 w-full max-w-5xl '>
         {projects?.map((project: Project, i: number) => (
           <FadeIn key={i}>
             <Link href={`/project/${project?.id}`}>
-              <div className=' rounded-xl bg-lightBackground p-3 duration-200 hover:brightness-125'>
+              <div className=' rounded-xl bg-lightBackground p-3 duration-200 hover:brightness-125 h-full'>
                 <div className='relative'>
                   <img
                     className='aspect-square shadow-xl object-cover rounded-xl'
@@ -36,20 +36,29 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
                     alt={project?.name}
                   />
                 </div>
-                <h3 className='text-headline text-xl font-semibold py-2'>
-                  {project?.name}
-                </h3>
-                <div className='flex gap-2 flex-wrap'>
-                  {project?.tools.slice(0, 2).map((item: any, i: number) => (
-                    <p
-                      key={i}
-                      className='text-paragraph font-semibold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
-                      {item}
+                <div className='flex flex-col justify-b'>
+                  <div>
+                    <h3 className='text-headline text-xl font-semibold py-2'>
+                      {project?.name}
+                    </h3>
+                    <p className='text-paragraph pb-2 text-sm'>
+                      {project?.summery
+                        ? project?.summery
+                        : "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Optio, reiciendis."}
                     </p>
-                  ))}
-                  <p className='text-paragraph font-bold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
-                    {"+ " + String(project?.tools.length - 2)}
-                  </p>
+                  </div>
+                  <div className='flex gap-2 flex-wrap flex-end'>
+                    {project?.tools.slice(0, 2).map((item: any, i: number) => (
+                      <p
+                        key={i}
+                        className='text-paragraph font-semibold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
+                        {item}
+                      </p>
+                    ))}
+                    <p className='text-paragraph font-bold text-xs border-greenText shadow-md px-2 py-1 border-2 rounded-full'>
+                      {"+ " + String(project?.tools.length - 2)}
+                    </p>
+                  </div>
                 </div>
               </div>
             </Link>

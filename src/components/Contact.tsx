@@ -32,7 +32,7 @@ const Contact: FC<ContactProps> = ({}) => {
     <FadeIn>
       <div
         id='contact'
-        className='flex flex-col items-center justify-center bg-lightBackground shadow-md shadow-background pt-4 p-4'>
+        className='flex flex-col items-center justify-center bg-lightBackground shadow-md shadow-background pt-4 p-4 aniamte-fade'>
         <h3 className='text-headline text-xl font-bold  pb-4'>
           {language === "en" ? "Contact Me" : "Kontakta Mig"}
         </h3>

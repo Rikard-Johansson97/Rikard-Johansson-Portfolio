@@ -91,26 +91,29 @@ const navigation: Navigation = {
   ],
 };
 
-interface Props {
-  projects: ProjectData;
-}
-
-export default function Home({ projects }: Props) {
+export default function Home() {
   const [currentNavigation, setCurrentNavigation] = useState<any>([]);
   const [language, setLanguage] = useSessionStorage("lang", "en");
-  const [projectsData, setProjectsData] = useState<Project[]>([]);
+  const [projectsData, setProjectsData] = useState<Project[]>();
   const [loaded, setLoaded] = useState<boolean>(false);
 
-  useEffect(() => {
-    setCurrentNavigation(navigation[language]);
+  const fetchProjects = async () => {
+    const projects = await getProjects();
     setProjectsData(
       language === "en" ? projects.projectsEN : projects.projectsSE
     );
+  };
+
+  useEffect(() => {
+    setCurrentNavigation(navigation[language]);
+    fetchProjects();
   }, [language]);
 
   useEffect(() => {
     setLoaded(true);
   }, []);
+
+  if (!language) return;
 
   return (
     <>
@@ -147,7 +150,7 @@ export default function Home({ projects }: Props) {
         <main>
           <>
             <Navbar navigation={currentNavigation} />
-            <Banner />
+            <Banner language={language} />
             <Skills />
             {/* <Services /> */}
             <Timeline />

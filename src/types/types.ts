@@ -18,4 +18,5 @@ export interface Project {
   domain: string;
   github: string;
   poster: string;
+  summery: string;
 }

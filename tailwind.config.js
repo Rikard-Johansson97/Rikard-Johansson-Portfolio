@@ -22,8 +22,8 @@ module.exports = {
         greenText: "#1db954",
       },
       gridTemplateColumns: {
-        "auto-fill-200": "repeat(auto-fill, minmax(220px, 1fr))",
-        "auto-fit-200": "repeat(auto-fit, minmax(220px, 1fr))",
+        "auto-fill-200": "repeat(auto-fill, minmax(250px, 1fr))",
+        "auto-fit-200": "repeat(auto-fit, minmax(250px, 1fr))",
         "auto-fill-300": "repeat(auto-fill, minmax(300px, 1fr))",
         "auto-fit-300": "repeat(auto-fit, minmax(220px, 1fr))",
       },
