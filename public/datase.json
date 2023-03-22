@@ -1,5 +1,52 @@
 [
   {
+    "collectionId": "q35la6guqbb12asdf123",
+    "collectionName": "projekt",
+    "created": "2023-02-18 17:25:25.836Z",
+    "summery": "Next.js nyhetsapp med SSR, ISR, Tailwind CSS, GraphQL-frågor och moderna utvecklingsmetoder.",
+    "description": "Jag byggde en nyhetsapp genom att utnyttja kraften i Next.js 13 och olika moderna webbutvecklingstekniker. Jag hanterade dynamisk data med alternativ för server-side rendering (SSR) och statisk data med alternativ för inkrementell statisk regenerering (ISR). Appen har en helt responsiv design med Tailwind CSS, stöd för mörkt läge och sökfunktionalitet med nyckelord/kategori med hjälp av News API. Jag använde också serverkomponenter, dynamisk sidorouting, effektiv datahämtning från MediaStack API, Stepzen GraphQL-integration, TypeScript och Vercel-implementering för en sömlös och optimerad användarupplevelse.",
+    "domain": "https://news-app-graph-ql-step-zen.vercel.app/",
+    "github": "https://github.com/Rikard-Johansson97/news-app-GraphQL-StepZen",
+    "id": "q35la6guqbb12asdf123",
+    "images": [
+      {
+        "largeURL": "https://i.imgur.com/WEXMmlI.png",
+        "thumbnailURL": "https://i.imgur.com/WEXMmlI.png",
+        "width": 1920,
+        "height": 930,
+        "display": "Desktop"
+      },
+      {
+        "largeURL": "https://i.imgur.com/iEnvFwX.jpg",
+        "thumbnailURL": "https://i.imgur.com/iEnvFwX.jpg",
+        "width": 960,
+        "height": 930,
+        "display": "Tablet"
+      },
+      {
+        "largeURL": "https://i.imgur.com/m5PfOC5.png",
+        "thumbnailURL": "https://i.imgur.com/m5PfOC5.png",
+        "width": 490,
+        "height": 930,
+        "display": "Mobile"
+      }
+    ],
+    "name": "News App",
+    "poster": "https://i.imgur.com/dgP6bn1.png",
+    "tools": [
+      "Next.js",
+      "GraphQL",
+      "TypeScript",
+      "TailwindCSS",
+      "SSR",
+      "ISR",
+      "NewsAPI",
+      "Dark mode"
+    ],
+    "updated": "2023-02-18 17:31:07.253Z",
+    "expand": {}
+  },
+  {
     "collectionId": "q35la6guqbb1234ssdf",
     "collectionName": "projekt",
     "created": "2023-02-18 17:25:25.836Z",
@@ -78,7 +125,14 @@
     ],
     "name": "Apple Store",
     "poster": "https://i.imgur.com/5Dhv0WS.jpg",
-    "tools": ["Next.js", "TypeScript", "NextAuth.js", "Sanity v3", "Redux Toolkit", "CMS"],
+    "tools": [
+      "Next.js",
+      "TypeScript",
+      "NextAuth.js",
+      "Sanity v3",
+      "Redux Toolkit",
+      "CMS"
+    ],
     "updated": "2023-02-18 17:31:07.253Z",
     "expand": {}
   },
