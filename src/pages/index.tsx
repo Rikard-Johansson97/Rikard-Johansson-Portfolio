@@ -121,7 +121,7 @@ export default function Home() {
         <title>Rikard Portfolio</title>
         <meta
           name='description'
-          content='Hej där! Kolla gärna in min portfölj för att se vilka projekt jag har skapat. Som fullstackutvecklare har jag byggt allt från responsiva webbsidor till avancerade webbapplikationer. Om du vill veta mer om mig och mina färdigheter, varför inte ta en titt på mina tidigare projekt? Tack för att du besöker min sida!'
+          content='Hej där! Kolla gärna in min portfölj för att se vilka projekt jag har skapat'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link
